@@ -1,0 +1,55 @@
+﻿ .spdm_searchimage_col  {
+        background-image: url('../img/imagemrede.png');
+        height: 471px;
+        text-align: center;
+        padding-top: 50px;
+        color: white;
+        font-size: 45px;
+        font-weight: bold;
+        line-height:48px;
+    }
+
+
+
+
+ .spdm_searchimage_button {
+    padding-top: 60px;
+ }
+
+  .spdm_searchimage_button button {
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: normal;
+    border: solid;
+    border-radius: 25px;
+    border-width: 1px;
+    width: 160px;
+    padding: 0px;
+    height: 50px;
+    outline:none;
+ }
+
+  /*desktop view*/
+@media (min-width: 768px) {
+    .spdm_searchimage_col{
+        width: 1021px;
+        margin-left:15px;
+    }
+
+     .spdm_searchimage_col span {
+        display: block;
+        margin-left: 210px;
+        margin-right: 210px;
+        line-height: 37px;
+        margin-top: 148px;
+        font-size: 34px;
+ }
+}
+
+@media (max-width: 414px) {
+
+    .spdm_searchimage_col {
+        font-size: 28px;
+        line-height: 30px;
+    }
+}

@@ -1,0 +1,61 @@
+﻿.spdm_network_search {
+    background-color: #30618c;
+    height: 108px;
+    margin-left: 15px;
+    display: inline-flex;
+    text-align: center;
+    padding-left: 35%;
+    padding-top: 38px;
+    width:1021px;
+}
+
+.spdm_network_search button {
+    font-size: 12px;
+    background-color: #30618c;
+    border-color:#fff;
+    margin-right:20px;
+    width:136px;
+    color:#fff;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 4px;
+    width: 130px;
+    letter-spacing:2px;
+}
+
+.spdm_network_search button:focus {
+    color:#fff;
+
+}
+
+
+.spdm_network_dropdown_treatment ul {
+    left:370px;
+}
+
+
+.spdm_network_dropdown_treatment button {
+    margin-right:20px;
+}
+
+
+.spdm_network_dropdown_location ul {
+    left:530px;
+   
+}
+
+.spdm_network_dropdown_location button {
+    margin-left:20px;
+}
+
+
+.spdm_network_result {
+    display:inline-flex;
+    width:1050px;
+} 
+
+.spm_network_map {
+    width: 1050px;
+    height: 350px;
+}

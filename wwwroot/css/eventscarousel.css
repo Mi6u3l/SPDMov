@@ -1,0 +1,214 @@
+﻿.spdm_eventscarousel_col {
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom:50px;
+}
+
+
+.spdm_eventscarousel_itemwrapper {
+     display:inline-flex;
+     width:242px;
+     background-image: url('../img/agendaitemborder.png');
+     background-position: right;
+     background-repeat: no-repeat;
+ }
+
+.spdm_eventscarousel_itemday {
+    font-size: 60px;
+    font-weight: bold;
+    color:#30618c;
+}
+
+.spdm_eventscarousel_date{
+    color:#000;
+    font-weight:bold;
+}
+
+.spdm_eventscarousel_itemtitle {
+    color:#30618c;
+}
+
+.spdm_eventscarousel_itemdescription {
+    line-height: 16px;
+    padding-top: 18px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.spdm_eventscarousel_itemcaption {
+    width: 150px;
+}
+
+.spdm_eventscarousel_title {
+    padding-bottom: 52px;
+    display: inline-block;
+    color: #30618c;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.spdm_eventscarousel_leftarrow{
+    top: 28px !important;
+    left: -15px !important;
+    border: none !important;
+    font-size: 17px !important;
+    background-image:none !important;
+}
+
+
+.spdm_eventscarousel_rightarrow {
+    top: 28px !important;
+    left: 0px;
+    border: none !important;
+    font-size: 17px !important;
+    background-image:none !important
+}
+
+
+
+.carousel-showmanymoveone .carousel-control {
+  width: 4%;
+  background-image: none;
+}
+.carousel-showmanymoveone .carousel-control.left {
+  margin-left: 15px;
+  color:#000;
+}
+.carousel-showmanymoveone .carousel-control.right {
+  margin-right: 15px;
+  color:#000;
+}
+.carousel-showmanymoveone .cloneditem-1,
+.carousel-showmanymoveone .cloneditem-2,
+.carousel-showmanymoveone .cloneditem-3 {
+  display: none;
+}
+@media all and (min-width: 768px) {
+
+  
+  .carousel-showmanymoveone .carousel-inner > .active.left,
+  .carousel-showmanymoveone .carousel-inner > .prev {
+    left: -50%;
+  }
+  .carousel-showmanymoveone .carousel-inner > .active.right,
+  .carousel-showmanymoveone .carousel-inner > .next {
+    left: 50%;
+  }
+  .carousel-showmanymoveone .carousel-inner > .left,
+  .carousel-showmanymoveone .carousel-inner > .prev.right,
+  .carousel-showmanymoveone .carousel-inner > .active {
+    left: 0;
+  }
+  .carousel-showmanymoveone .carousel-inner .cloneditem-1 {
+    display: block;
+  }
+}
+@media all and (min-width: 768px) and (transform-3d), all and (min-width: 768px) and (-webkit-transform-3d) {
+  .carousel-showmanymoveone .carousel-inner > .item.active.right,
+  .carousel-showmanymoveone .carousel-inner > .item.next {
+    -webkit-transform: translate3d(50%, 0, 0);
+            transform: translate3d(50%, 0, 0);
+    left: 0;
+  }
+  .carousel-showmanymoveone .carousel-inner > .item.active.left,
+  .carousel-showmanymoveone .carousel-inner > .item.prev {
+    -webkit-transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-50%, 0, 0);
+    left: 0;
+  }
+  .carousel-showmanymoveone .carousel-inner > .item.left,
+  .carousel-showmanymoveone .carousel-inner > .item.prev.right,
+  .carousel-showmanymoveone .carousel-inner > .item.active {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    left: 0;
+  }
+}
+@media all and (min-width: 992px) {
+  .carousel-showmanymoveone .carousel-inner > .active.left,
+  .carousel-showmanymoveone .carousel-inner > .prev {
+    left: -25%;
+  }
+  .carousel-showmanymoveone .carousel-inner > .active.right,
+  .carousel-showmanymoveone .carousel-inner > .next {
+    left: 25%;
+  }
+  .carousel-showmanymoveone .carousel-inner > .left,
+  .carousel-showmanymoveone .carousel-inner > .prev.right,
+  .carousel-showmanymoveone .carousel-inner > .active {
+    left: 0;
+  }
+  .carousel-showmanymoveone .carousel-inner .cloneditem-2,
+  .carousel-showmanymoveone .carousel-inner .cloneditem-3 {
+    display: block;
+  }
+}
+@media all and (min-width: 992px) and (transform-3d), all and (min-width: 992px) and (-webkit-transform-3d) {
+  .carousel-showmanymoveone .carousel-inner > .item.active.right,
+  .carousel-showmanymoveone .carousel-inner > .item.next {
+    -webkit-transform: translate3d(25%, 0, 0);
+            transform: translate3d(25%, 0, 0);
+    left: 0;
+  }
+  .carousel-showmanymoveone .carousel-inner > .item.active.left,
+  .carousel-showmanymoveone .carousel-inner > .item.prev {
+    -webkit-transform: translate3d(-25%, 0, 0);
+            transform: translate3d(-25%, 0, 0);
+    left: 0;
+  }
+  .carousel-showmanymoveone .carousel-inner > .item.left,
+  .carousel-showmanymoveone .carousel-inner > .item.prev.right,
+  .carousel-showmanymoveone .carousel-inner > .item.active {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    left: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    margin: 28px;
+    float: left;
+  }
+}
+.title {
+  padding: 28px;
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*mobile view*/
+@media (max-width: 414px) {
+  .spdm_eventscarousel_col {
+       height:400px;
+  }
+
+  .spdm_eventscarousel_itemcaption {
+        display:block;
+        color:#000;
+
+  }
+
+  .spdm_eventscarousel_itemwrapper {
+      background-image:none;
+  }
+
+  .carousel-showmanymoveone .carousel-control.right {
+      display:none;
+  }
+
+   .carousel-showmanymoveone .carousel-control.left {
+      display:none;
+  }
+
+   .carousel-inner {
+       width:100% !important;
+   }
+
+   .spdm_eventscarousel_title {
+       padding-bottom: 18px;
+   }
+}
+

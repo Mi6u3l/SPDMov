@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@section Scripts {
+    <script src="~/lib/angular/angular.min.js"></script>
+    <script src="~/js/app-homepage.js"></script>
+    <script src="~/js/topCarouselController.js"></script>
+    <script src="~/js/newsController.js"></script>
+    <script src="~/js/eventsCarouselController.js"></script>
+    <script src="~/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/JavaScript">
+
+        $(document).ready(function () {
+            //top carousel
+            var appElement = document.querySelector('[ng-app=app-homepage]');
+            var appScope = angular.element(appElement).scope();
+            var controllerScope = appScope.$$childHead;
+            var slides = controllerScope.slides;
+            console.log(slides[0].paging);
+            $("span.ng-binding").each(function (index) {
+                $(this).text(slides[index].paging);
+                $(this).removeClass('sr-only');
+            });
+
+
+        });
+
+    </script>
+
+}
+
+@section AddToHead{
+    <link href="~/css/topcarousel.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/news.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/searchimage.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/eventscarousel.css" rel="stylesheet" type="text/css" />
+}
+
+<div ng-app="app-homepage">
+    <!-- top carousel -->
+    <div class="row">
+        <div class="spdm_topcarousel_col col-md-12">
+            <div ng-controller="topCarouselController" id="slides_control">
+                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                    <div uib-slide ng-repeat="slide in slides track by slide.id" index="$index">
+                        <img class="spdm_topcarousel_image" ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                            <h1 class="spdm_topcarousel_heading">{{slide.heading}}</h1>
+                            <h4 class="spdm_topcarousel_subheading">{{slide.subheading}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- news -->
+    <div class="spdm_news_row row">
+        <div class="spdm_news_col col-md-12">
+            <div ng-controller="newsController" id="news_control">
+                <span class="spdm_news_title">Últimas Notícias</span>
+                <div class="spdm_news_wrapper">
+                    <div ng-repeat="newsitem in news">
+                          <figure class="spdm_news_item">
+                            <div class="spdm_news_origin">{{ newsitem.origin }}</div>
+                            <img src="{{ newsitem.image }}" />
+                            <figcaption class="spdm_news_caption">
+                                <div class="spdm_news_date">{{ newsitem.date }}</div>
+                                <h4>{{ newsitem.title }}</h4>
+                                <h5>{{ newsitem.subtitle }}</h5>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <span class="spdm_news_morenews">Ler mais Notícias</span>
+            </div>
+        </div>
+    </div>
+    <!-- Search image -->
+    <div class="row">
+        <div class="spdm_searchimage_col col-md-12">
+            <span>Encontre aqui a melhor rede de Cuidados de Doenças do Movimento</span>
+            <div class="spdm_searchimage_button"><button onclick="location.href='/App/Network';" id="btnSearch">Pesquisar</button></div>
+        </div>
+    </div>
+    <!-- Event carousel -->
+    <div class="row">
+        <div class="spdm_eventscarousel_col col-md-12">
+            <span class="spdm_eventscarousel_title">Agenda</span>
+            <div class="carousel carousel-showmanymoveone slide" ng-controller="eventsCarousel" id="eventsCarousel">
+                <div class="carousel-inner">
+                    <div class="item" ng-repeat="event in events">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <a href="#">
+                                <div class="spdm_eventscarousel_itemwrapper col-sm-6 col-md-3">
+                                    <div class="spdm_eventscarousel_itemday">
+                                        <span>{{ event.day }}</span>
+                                    </div>
+                                    <div class="spdm_eventscarousel_itemdescription">
+                                        <div class="spdm_eventscarousel_itemtitle">{{ event.title }} <span class="spdm_eventscarousel_date">{{ event.date }}</span></div>
+                                        <div class="spdm_eventscarousel_itemcaption">{{ event.caption }}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#eventsCarousel" data-slide="prev"><i class="spdm_eventscarousel_leftarrow glyphicon glyphicon-chevron-left"></i></a>
+                <a class="right carousel-control" href="#eventsCarousel" data-slide="next"><i class="spdm_eventscarousel_rightarrow glyphicon glyphicon-chevron-right"></i></a>
+                <init-events-carousel></init-events-carousel>
+            </div>
+        </div>
+    </div>
+</div>

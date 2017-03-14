@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Network";
+}
+
+@section Scripts {
+   <script src="~/lib/angular/angular.min.js"></script>
+   <script src="~/js/app-network.js"></script>
+   <script src="~/js/networkController.js"></script>
+   <script src="~/js/networkMapDirective.js"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM1NEcsr1ZwsFtiv62qH92-Z_F32z6gz4&sensor=false"></script>
+   <script src="~/lib/lodash/dist/lodash.min.js"></script>
+   <script href="~/lib/angular-google-maps/dist/angular-google-maps.min.js" ></script>
+}
+
+
+@section AddToHead{
+    <link href="~/css/network.css" rel="stylesheet" type="text/css" /> 
+}
+
+<div ng-app="app-network" ng-controller="networkController">
+    <div class="row">
+        <div class="col-md-12">
+            <img alt="logo" src="~/img/imagemrede.png" />
+        </div>
+     </div>
+    <div class="row">
+        <div class="spdm_network_search col-md-12">
+           <div class="spdm_network_dropdown_treatment">
+               <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+                   TRATAMENTO
+                   <span class="fa fa-chevron-down fa-1"></span>
+               </button>
+               <ul class="dropdown-menu">
+                   <li ng-repeat="treatment in treatments"><a href="">{{ treatment.name }}</a></li>
+               </ul>
+           </div>
+           <div class="spdm_network_dropdown_location">
+               <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+                   LOCALIDADE
+                   <span class="fa fa-chevron-down fa-1"></span>
+               </button>
+               <ul class="dropdown-menu">
+                  <li ng-repeat="location in locations" ng-click="centerMap(location.coordinates, location.name)" value="{{ location.coordinates }}"><a href="">{{ location.name }}</a></li>
+               </ul>
+           </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="spdm_network_result col-md-12">
+            <div class="spm_network_map" id="map" ></div>
+        </div>
+    </div>
+</div>
