@@ -1,34 +1,43 @@
 "use strict";
 var app = angular.module("app-network");
 app.controller('networkController', function($scope, $http, $window) {
+    $scope.detail = [];
     $scope.locations = [];
     $scope.treatments = [];
+    $scope.showDetails = false;
     $scope.init = function () {
-        $scope.locations = [
-            {
-                id: 1,
-                coordinates: '38.7437395,-9.2304158',
-                name: 'Lisboa',
-            },
-            {
-                id: 2,
-                coordinates:'41.162928,-8.65695848',
-                name: 'Porto'
-            }
-        ];
-
-        $scope.treatments = [
-           {
-               id: 1,
-               name: 'tratamento 1'
-           },
-           {
-               id: 2,
-               name: 'tratamento 2'
-           }
-        ];
+    $scope.detail =
+    {
+        id: 1,
+        title: 'Centro Hospitalar de Lisboa Central',
+        subtitle : 'Carateristicas do serviço e grupo de doenças do movimento',
+        description: '- Serviço de neurologia individualizado',
+        image: '/img/centrohospitalar.png'
     }
-
+    
+    $scope.locations = [
+        {
+            id: 1,
+            coordinates: '38.7437395,-9.2304158',
+            name: 'Lisboa',
+        },
+        {
+            id: 2,
+            coordinates:'41.162928,-8.65695848',
+            name: 'Porto'
+        }
+    ];
+    $scope.treatments = [
+        {
+            id: 1,
+            name: 'tratamento 1'
+        },
+        {
+            id: 2,
+            name: 'tratamento 2'
+        }
+    ];
+   }
     $scope.map = new google.maps.Map(document.getElementById('map'), {
         center: {
             lat: 39.9656249,
@@ -66,6 +75,12 @@ app.controller('networkController', function($scope, $http, $window) {
        
         google.maps.event.addListener(marker, 'click', function () {
             console.log(marker.title);
+            //fill details information
+
+            //show details
+            console.log($scope.showDetails);
+            $scope.showDetails = true;
+            $scope.$apply();
             // close window if not undefined
             //if (infoWindow !== void 0) {
             //    infoWindow.close();

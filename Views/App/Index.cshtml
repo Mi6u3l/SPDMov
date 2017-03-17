@@ -4,30 +4,13 @@
 
 @section Scripts {
     <script src="~/lib/angular/angular.min.js"></script>
-    <script src="~/js/app-homepage.js"></script>
-    <script src="~/js/topCarouselController.js"></script>
-    <script src="~/js/newsController.js"></script>
-    <script src="~/js/eventsCarouselController.js"></script>
+    <script src="~/js/homepage/app-homepage.js"></script>
+    <script src="~/js/homepage/topCarouselFactory.js"></script>
+    <script src="~/js/homepage/topCarouselController.js"></script>
+    <script src="~/js/homepage/topCarouselDirective.js"></script>
+    <script src="~/js/homepage/newsController.js"></script>
+    <script src="~/js/homepage/eventsCarouselController.js"></script>
     <script src="~/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-    <script type="text/JavaScript">
-
-        $(document).ready(function () {
-            //top carousel
-            var appElement = document.querySelector('[ng-app=app-homepage]');
-            var appScope = angular.element(appElement).scope();
-            var controllerScope = appScope.$$childHead;
-            var slides = controllerScope.slides;
-            console.log(slides[0].paging);
-            $("span.ng-binding").each(function (index) {
-                $(this).text(slides[index].paging);
-                $(this).removeClass('sr-only');
-            });
-
-
-        });
-
-    </script>
-
 }
 
 @section AddToHead{
@@ -43,16 +26,17 @@
         <div class="spdm_topcarousel_col col-md-12">
             <div ng-controller="topCarouselController" id="slides_control">
                 <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                    <div uib-slide ng-repeat="slide in slides track by slide.id" index="$index">
-                        <img class="spdm_topcarousel_image" ng-src="{{slide.image}}" style="margin:auto;">
+                    <div uib-slide ng-repeat="slide in slides track by $index" index="$index">
+                        <img class="spdm_topcarousel_image" ng-src="{{ absoulteUrl + slide.FileRef}}" style="margin:auto;">
                         <div class="carousel-caption">
-                            <h1 class="spdm_topcarousel_heading">{{slide.heading}}</h1>
-                            <h4 class="spdm_topcarousel_subheading">{{slide.subheading}}</h4>
+                            <h1 class="spdm_topcarousel_heading">{{slide.Heading}}</h1>
+                            <h4 class="spdm_topcarousel_subheading">{{slide.Subheading}}</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <set-carousel-paging></set-carousel-paging>
     </div>
     <!-- news -->
     <div class="spdm_news_row row">

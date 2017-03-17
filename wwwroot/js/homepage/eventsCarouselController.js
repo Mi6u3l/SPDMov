@@ -1,6 +1,6 @@
 ﻿"use strict";
 var app = angular.module("app-homepage");
-app.controller('eventsCarousel', function($scope, $http, $timeout) {
+app.controller('eventsCarousel', function($scope) {
     $scope.events = [];
     
     $scope.init = function () {
@@ -57,7 +57,7 @@ app.controller('eventsCarousel', function($scope, $http, $timeout) {
 
 app.directive('initEventsCarousel', ['$timeout', function ($timeout) {
     return {
-        link: function ($scope, element, attrs) {
+        link: function ($scope) {
                 $timeout(function () {
                     //events carousel
                     (function () {

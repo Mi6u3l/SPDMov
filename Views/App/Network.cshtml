@@ -4,9 +4,9 @@
 
 @section Scripts {
    <script src="~/lib/angular/angular.min.js"></script>
-   <script src="~/js/app-network.js"></script>
-   <script src="~/js/networkController.js"></script>
-   <script src="~/js/networkMapDirective.js"></script>
+   <script src="~/js/network/app-network.js"></script>
+   <script src="~/js/network/networkController.js"></script>
+   <script src="~/js/network/networkMapDirective.js"></script>
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM1NEcsr1ZwsFtiv62qH92-Z_F32z6gz4&sensor=false"></script>
    <script src="~/lib/lodash/dist/lodash.min.js"></script>
    <script href="~/lib/angular-google-maps/dist/angular-google-maps.min.js" ></script>
@@ -20,7 +20,7 @@
 <div ng-app="app-network" ng-controller="networkController">
     <div class="row">
         <div class="col-md-12">
-            <img alt="logo" src="~/img/imagemrede.png" />
+            <img alt="logo" src="~/img/rede.png" />
         </div>
      </div>
     <div class="row">
@@ -47,7 +47,14 @@
     </div>
     <div class="row">
         <div class="spdm_network_result col-md-12">
-            <div class="spm_network_map" id="map" ></div>
+            <div class="spdm_network_details" ng-show="showDetails">
+                <div class="spdm_network_closedetails" ng-click="showDetails = false"><i class="fa fa-times" aria-hidden="true"></i></div>
+                <div class="spdm_network_detail_image"><img ng-src="{{ detail.image }}"></div>
+                <div class="spdm_network_detail_title">{{ detail.title }}</div>
+                <div class="spdm_network_detail_subtitle">{{ detail.subtitle }}</div>
+                <div class="spdm_network_detail_description">{{ detail.description }}</div>
+            </div>
+            <div class="spdm_network_map" id="map" ></div>
         </div>
     </div>
 </div>
