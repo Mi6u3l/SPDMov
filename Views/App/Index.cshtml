@@ -44,7 +44,7 @@
             <div ng-controller="newsController" id="news_control">
                 <span class="spdm_news_title">Últimas Notícias</span>
                 <div class="spdm_news_wrapper">
-                    <div ng-repeat="newsitem in news">
+                    <div ng-repeat="newsitem in news" class="spdm_news_itemwrapper">
                           <figure class="spdm_news_item">
                             <div class="spdm_news_origin">{{ newsitem.origin }}</div>
                             <img src="{{ newsitem.image }}" />
@@ -72,7 +72,7 @@
         <div class="spdm_eventscarousel_col col-md-12">
             <span class="spdm_eventscarousel_title">Agenda</span>
             <div class="carousel carousel-showmanymoveone slide" ng-controller="eventsCarousel" id="eventsCarousel">
-                <div class="carousel-inner">
+                <div class="carousel-inner spdm_eventscarousel_inner">
                     <div class="item" ng-repeat="event in events">
                         <div class="col-xs-12 col-sm-6 col-md-3">
                             <a href="#">

@@ -1,14 +1,28 @@
-﻿
+﻿/*start-minimum view port*/
+.spdm_news_morenews {
+    background-color: #264e72;
+    color: #fff;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 58px;
+    padding-right: 58px;
+    display: inline-block;
+    margin-top: 14px;
+    margin-bottom: 55px;
+}
+
  .spdm_news_title {
     color: #fff;
     font-size: 24px;
     font-weight: bold;
 }
 
+  .spdm_news_row {
+        padding-top: 152px;
+    }
+
   .spdm_news_col {
         background-color:#30618c;
-        margin-left: 15px;
-        margin-right: 15px;
         padding-top:45px;
         text-align:center;
   }
@@ -19,6 +33,10 @@
        padding-bottom: 30px;
        width: 210px;
        margin-right:28px;
+  }
+
+  .spdm_news_itemwrapper {
+      display: inline-block;
   }
 
 
@@ -59,38 +77,14 @@
       width:210px;
   }
 
-  .spdm_news_morenews { 
-    background-color: #264e72;
-    color: #fff;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 175px;
-    padding-right: 175px;
-    display: inline-block;
-    margin-top: 14px;
-    margin-bottom: 55px;
-  }
-
-/*desktop view*/
-@media (min-width: 768px) {
-    .spdm_news_row {
-        padding-top: 115px;
-    }
-
-    .spdm_news_col {
-        background-color: #30618c;
-        width: 1021px;
-    }
-
-    
   .spdm_news_wrapper {
-      display:inline-flex;
-      padding-left: 30px;
+      padding-left: 28px;
   }
-}
+/*end-minimum view port*/
 
-/*mobile view */
-@media (max-width: 414px) {
+
+/*start-horizontal mobile view */
+@media (min-width: 576px) {
 
     .spdm_news_wrapper {
       padding-left: 17px;
@@ -113,4 +107,35 @@
         margin-right: 0px;
     }
 }
+/* end-mobile view */
+
+/* start-desktop view*/
+@media (min-width: 1200px) {
+    .spdm_news_row {
+        padding-top: 115px;
+    }
+
+    .spdm_news_col {
+        background-color: #30618c;
+    }
+
+    
+  .spdm_news_wrapper {
+      display:inline-block;
+      width: 100%;
+      padding-left: 17px;
+  }
+
+  
+ .spdm_news_morenews {
+    background-color: #264e72;
+    color: #fff;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: inline-block;
+    margin-top: 14px;
+    margin-bottom: 55px;
+    width: 452px;
+}
+/*end-desktop view */
 

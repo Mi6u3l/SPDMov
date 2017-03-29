@@ -1,31 +1,27 @@
-﻿.spdm_eventscarousel_col {
+﻿/* start-minimum view port*/
+  .spdm_eventscarousel_col {
+    height: 370px;
     text-align: center;
-    padding-top: 45px;
-    padding-bottom:50px;
-}
+  }
 
+  .spdm_eventscarousel_itemcaption {
+        display:block;
+        color:#000;
 
-.spdm_eventscarousel_itemwrapper {
-     display:inline-flex;
-     width:242px;
-     background-image: url('../img/agendaitemborder.png');
-     background-position: right;
-     background-repeat: no-repeat;
- }
+  }
 
-.spdm_eventscarousel_itemday {
+  .spdm_eventscarousel_itemwrapper {
+      background-image:none;
+      display: inline-flex;
+       width: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+  .spdm_eventscarousel_itemday {
     font-size: 60px;
     font-weight: bold;
-    color:#30618c;
-}
-
-.spdm_eventscarousel_date{
-    color:#000;
-    font-weight:bold;
-}
-
-.spdm_eventscarousel_itemtitle {
-    color:#30618c;
+    color: #30618c;
 }
 
 .spdm_eventscarousel_itemdescription {
@@ -35,47 +31,42 @@
     font-size: 12px;
 }
 
-.spdm_eventscarousel_itemcaption {
-    width: 150px;
+.spdm_eventscarousel_itemtitle {
+    color: #30618c;
 }
+  .carousel-showmanymoveone .carousel-control.right {
+      display:none;
+  }
 
-.spdm_eventscarousel_title {
-    padding-bottom: 52px;
+   .carousel-showmanymoveone .carousel-control.left {
+      display:none;
+  }
+
+   .carousel-inner {
+       width:100% !important;
+   }
+
+   .spdm_eventscarousel_title {
+       padding-bottom: 20px;
+    padding-top: 10px;
     display: inline-block;
     color: #30618c;
     font-size: 26px;
     font-weight: bold;
-}
+   }
+/* end-minimum view port*/
 
-.spdm_eventscarousel_leftarrow{
-    top: 28px !important;
-    left: -15px !important;
-    border: none !important;
-    font-size: 17px !important;
-    background-image:none !important;
-}
-
-
-.spdm_eventscarousel_rightarrow {
-    top: 28px !important;
-    left: 0px;
-    border: none !important;
-    font-size: 17px !important;
-    background-image:none !important
-}
-
-
-
+/*start-oob styles*/
 .carousel-showmanymoveone .carousel-control {
   width: 4%;
   background-image: none;
 }
 .carousel-showmanymoveone .carousel-control.left {
-  margin-left: 15px;
+  margin-left: 0px;
   color:#000;
 }
 .carousel-showmanymoveone .carousel-control.right {
-  margin-right: 15px;
+  margin-right: 0px;
   color:#000;
 }
 .carousel-showmanymoveone .cloneditem-1,
@@ -170,6 +161,7 @@
     margin: 28px;
     float: left;
   }
+
 }
 .title {
   padding: 28px;
@@ -178,37 +170,90 @@
   vertical-align: middle;
   text-align: center;
 }
+/*end-oob styles*/
 
-/*mobile view*/
-@media (max-width: 414px) {
-  .spdm_eventscarousel_col {
-       height:400px;
-  }
 
-  .spdm_eventscarousel_itemcaption {
-        display:block;
-        color:#000;
-
-  }
-
-  .spdm_eventscarousel_itemwrapper {
-      background-image:none;
-  }
+@media (min-width: 1200px) {
 
   .carousel-showmanymoveone .carousel-control.right {
-      display:none;
+    display:block;
+}
+
+  .carousel-showmanymoveone .carousel-control.left {
+    display:block;
+}
+
+.spdm_eventscarousel_col {
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom:50px;
+}
+
+.spdm_eventscarousel_itemwrapper {
+     display:inline-flex;
+     width:100%;
+     background-image: url('../img/agendaitemborder.png');
+     background-position: right;
+     background-repeat: no-repeat;
+ }
+
+.spdm_eventscarousel_itemwrapper div:nth-child(3) {
+    background-image: none;
+ }
+
+.spdm_eventscarousel_itemday {
+    font-size: 60px;
+    font-weight: bold;
+    color:#30618c;
+}
+
+.spdm_eventscarousel_date{
+    color:#000;
+    font-weight:bold;
+}
+
+.spdm_eventscarousel_itemtitle {
+    color:#30618c;
+}
+
+.spdm_eventscarousel_itemdescription {
+    line-height: 16px;
+    padding-top: 18px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.spdm_eventscarousel_itemcaption {
+    width: 150px;
+}
+
+.spdm_eventscarousel_title {
+    padding-bottom: 52px;
+    display: inline-block;
+    color: #30618c;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.spdm_eventscarousel_leftarrow{
+    top: 28px !important;
+    left: -20px !important;
+    border: none !important;
+    font-size: 17px !important;
+    background-image:none !important;
+}
+
+
+.spdm_eventscarousel_rightarrow {
+    top: 28px !important;
+    left: 0px;
+    border: none !important;
+    font-size: 17px !important;
+    background-image:none !important
+}
+
+ .spdm_eventscarousel_col {
+       height:260px;
   }
-
-   .carousel-showmanymoveone .carousel-control.left {
-      display:none;
-  }
-
-   .carousel-inner {
-       width:100% !important;
-   }
-
-   .spdm_eventscarousel_title {
-       padding-bottom: 18px;
-   }
 }
 

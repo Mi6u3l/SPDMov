@@ -1,5 +1,57 @@
-﻿ .spdm_searchimage_col  {
+﻿/*start-minimum view port*/
+.spdm_searchimage_col span {
+     
+ }
+
+.spdm_searchimage_col  {
+    background-image: url(../img/imagemrede.png);
+    background-size: 600px;
+    background-position-x: -90px;
+    height: 280px;
+    text-align: center;
+    padding-top: 60px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 30px;
+    background-repeat: no-repeat;
+}
+
+ .spdm_searchimage_button {
+    padding-top: 30px;
+ }
+
+ .spdm_searchimage_button button {
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: normal;
+    border: solid;
+    border-radius: 25px;
+    border-width: 1px;
+    width: 160px;
+    padding: 0px;
+    height: 50px;
+    outline:none;
+ }
+
+/*end-minimum view port*/
+
+
+/*start-desktop view*/
+@media (min-width: 1200px) {
+
+     .spdm_searchimage_col span {
+        display: block;
+        margin-left: 210px;
+        margin-right: 210px;
+        line-height: 37px;
+        margin-top: 148px;
+        font-size: 34px;
+ }
+
+   .spdm_searchimage_col  {
         background-image: url('../img/imagemrede.png');
+        background-size: 100%;
         height: 471px;
         text-align: center;
         padding-top: 50px;
@@ -7,6 +59,7 @@
         font-size: 45px;
         font-weight: bold;
         line-height:48px;
+        background-position-x: 0;
     }
 
 
@@ -27,27 +80,7 @@
     outline:none;
  }
 
-  /*desktop view*/
-@media (min-width: 768px) {
-    .spdm_searchimage_col{
-        width: 1021px;
-        margin-left:15px;
-    }
-
-     .spdm_searchimage_col span {
-        display: block;
-        margin-left: 210px;
-        margin-right: 210px;
-        line-height: 37px;
-        margin-top: 148px;
-        font-size: 34px;
- }
 }
+/*end-desktop view*/
 
-@media (max-width: 414px) {
 
-    .spdm_searchimage_col {
-        font-size: 28px;
-        line-height: 30px;
-    }
-}

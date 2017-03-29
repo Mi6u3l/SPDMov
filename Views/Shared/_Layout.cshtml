@@ -15,9 +15,6 @@
         @RenderSection("AddToHead", required: false)
     }
 
-
-
-
 </head>
 <body>
     <!-- Fixed navbar -->
@@ -34,45 +31,53 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="spdm_listitem_mobile">
+                    <li class="dropdown spdm_listitem_mobile">
                         <div class="spdm_listitem_mobile spdm_listitem_mobile_title">
                             <span>SPDMov<br /></span>
                            Sociedade portuguesa das <br /> doenças do movimento
                         </div>
                     </li>
                     <li class="dropdown spdm_toplevel_listitem spdm_oneline_listitem active">
-                        <div class="spdm_toplevel_wrapper">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">A SPDMov<i class="fa fa-chevron-down fa-1" aria-hidden="true"></i></a>
-                        </div>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">A SPDMov<i class="fa fa-chevron-down fa-1" aria-hidden="true"></i></a>
+                       <ul class="dropdown-menu">
+                            <li><a href="App/Article/TextoWord">Texto word</a></li>
+                            <li><a href="#">História</a></li>
+                            <li><a href="#">Reuniões</a></li>
+                            <li><a href="#">Órgãos Sociais</a></li>
+                            <li><a href="#">Working Groups</a></li>
+                            <li><a href="#">Contactos</a></li>
                         </ul>
                     </li>
                     <li class="dropdown spdm_toplevel_listitem">
-                        <div class="spdm_toplevel_wrapper">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Doenças do Movimento <i class="fa fa-chevron-down fa-1" aria-hidden="true"></i></a>
-                        </div>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Doenças do Movimento <i class="fa fa-chevron-down fa-1" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
+                            <li><a href="#">O que são</a></li>
+                            <li><a href="#">Principais doenças</a></li>
+                            <li><a href="#">Doenças raras</a></li>
                         </ul>
                     </li>
                     <li class="spdm_toplevel_listitem">
                         <div class="spdm_toplevel_wrapper">
+                            <a href="#contact">Documentos</a>
+                        </div>
+                    </li>
+                    <li class="spdm_toplevel_listitem">
+                        <div class="spdm_toplevel_wrapper">
+                            <a href="#contact">Notícias</a>
+                        </div>
+                    </li>
+                    <li class="spdm_toplevel_listitem spdm_oneline_listitem ">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Educação <i class="fa fa-chevron-down fa-1" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Moving Buzz</a></li>
+                            <li><a href="#">Actualizações</a></li>
+                            <li><a href="#">Cursos da SPDMov</a></li>
+                        </ul>
+                    </li>
+                     <li class="spdm_toplevel_listitem spdm_toplevel_listitem_last">
+                        <div class="spdm_toplevel_last">
                             <a href="#contact">Links de interesse</a>
                         </div>
-                    </li>
-                    <li class="spdm_toplevel_listitem">
-                        <div class="spdm_toplevel_wrapper">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Notícias e Eventos<i class="fa fa-chevron-down fa-1" aria-hidden="true"></i></a>
-                        </div>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                        </ul>
-                    </li>
-                    <li class="spdm_toplevel_listitem spdm_oneline_listitem spdm_toplevel_listitem_last">
-                        <div class="spdm_toplevel_wrapper">
-                            <a href="#" >Educação</a>
-                       </div>
                     </li>
                     <li class="spdm_listitem_mobile">
                         <div class="spdm_toplevel_wrapper">
@@ -82,26 +87,23 @@
                     <li class="spdm_listitem_redecuidados">
                         <button  type="button" onclick="location.href='/App/Network';" class="spdm_button_redecuidados">Rede de cuidados</button>
                     </li>
-                    <li class="spdm_listitem_pesquisa">
-                        <a href="#contact"><img alt="logo" src="~/img/magnifying.png" /></a>
-                    </li>
                 </ul>
               </div><!--/.nav-collapse -->
         </div>
     </nav>
-    <div class="container">
+    <div class="container-full">
         @RenderBody()
     </div>
     <!-- footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="container-full">
             <div class="spdm_footer_wrapper">
                 <div class="spdm_footer_logo">
                     <div>Com o apoio da bolsa sem restrições de:</div>
                     <div><img src="~/img/allergan.png" /></div>
                 </div>
                 <div class="spdm_footer_links1">
-                    <div><a href="#">A SPDMov</a></div>
+                    <div><a href="/Article/">A SPDMov</a></div>
                     <div><a href="#">Doenças do Movimento</a></div>
                     <div><a href="#">Links de Interesse</a></div>
                 </div>

@@ -62,7 +62,7 @@ app.directive('initEventsCarousel', ['$timeout', function ($timeout) {
                     //events carousel
                     (function () {
                         $('#eventsCarousel').find('.item').first().addClass('active');
-                        $('#eventsCarousel').find('.carousel-inner').css('width', '97%');
+                        $('#eventsCarousel').find('.carousel-inner').css('width', '100%');
                         // setup your carousels as you normally would using JS
                         // or via data attributes according to the documentation
                         // http://getbootstrap.com/javascript/#carousel

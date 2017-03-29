@@ -3,10 +3,3 @@
     $(this).addClass("spdm_toplevel_active");
    
 });
-
-
-$(".nav li").on("click", function () {
-    $(".nav li").removeClass("open");
-    $(this).addClass("open");
-
-});

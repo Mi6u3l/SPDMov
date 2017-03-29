@@ -1,4 +1,22 @@
 ﻿/* bootstrap overrides */
+.dropdown-menu {
+    top: 71px;
+    border: 0px;
+    border-radius: 0px;
+    background-color: #477dae;
+    opacity: 0.7;
+    width: 170px;
+}
+
+.dropdown-menu > li > a {
+    color: #ffffff !important;
+    padding-left: 28px;
+    width: 168px;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #3d709e !important;
+}
 
 /* Menu for laptop */
 @media (min-width: 768px) {
@@ -76,10 +94,16 @@
         border-right-style: solid;
         border-right-width: 1px;
         border-right-color: #EFEFEF;
-        width: 118px;
+        width: 116px;
         text-align: center;
         color: #7A7B7D;
         font-size: 1em;
+        line-height: 14px;
+    }
+
+     .spdm_toplevel_listitem a {
+        background-color: transparent !important; 
+        color: #000 !important;       
     }
 
     .spdm_toplevel_listitem_last {
@@ -87,10 +111,17 @@
     }
 
     .spdm_toplevel_wrapper {
-        padding-top: 16px;
+        padding-top: 22px;
         margin-left: 10px;
         width: 100px;
-        height: 89%;
+        height: 85%;
+    
+    }
+      .spdm_toplevel_last {
+        padding-top: 18px;
+        margin-left: 10px;
+        width: 100px;
+        height: 85%;
     }
 
     .spdm_toplevel_active {
@@ -189,6 +220,11 @@
        background-size: 760px 800px;
 
    }
+   
+    .spdm_toplevel_listitem a {
+        background-color: transparent !important; 
+        color: #000 !important;       
+    }
 
    .navbar-collapse{
        border-top:0px;
@@ -230,5 +266,3 @@
         display:none;
     }
 }
-
-

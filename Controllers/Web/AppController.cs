@@ -17,6 +17,12 @@ namespace SPDMov.Controllers.Web
         {
             return View();
         }
+
+        
+        public IActionResult Article()
+        {
+            return View();
+        }
     }
    
 }

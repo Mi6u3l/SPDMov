@@ -1,69 +1,84 @@
-﻿
-    .carousel-control.left {
-        background-image: none;
-        color: white;
-    }
+﻿/*start-minimum view port*/
+.carousel-control.left {
+    background-image: none;
+    color: white;
+}
 
-    .carousel-control.right {
-        background-image: none;
-        color: white;
-    }
+.carousel-control.right {
+    background-image: none;
+    color: white;
+}
 
-    .carousel-indicators {
-        top: 512px;
-        margin-left: 0px;
-        left: 0;
-        width: 100%;
-    }
+.carousel-indicators {
+    top: 512px;
+    margin-left: 0px;
+    left: 0;
+    width: 100%;
+}
+
+.carousel-indicators li {
+    border: 0;
+    width: 24%;
+    border-radius: 0px;
+    margin: 0px;
+    text-indent: 0px;
+    line-height: 14px;
+    vertical-align: bottom;
+    padding-top: 20px;
+    background-color: transparent;
+    padding-top: 50px;
+}
 
 
-    .carousel-indicators li {
-        border: 0;
-        width: 24%;
-        border-radius: 0px;
-        margin: 0px;
-        text-indent: 0px;
-        line-height: 14px;
-        vertical-align: bottom;
-        padding-top: 20px;
-        background-color: transparent;
-        padding-top: 50px;
-    }
+.carousel-indicators li span.ng-binding {
+    display: block;
+    height: 85px;
+    height: 85px;
+    margin-right: 10px;
+}
 
+.carousel-indicators li:not(:last-child) span.ng-binding {
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #EFEFEF;
+}
 
-    .carousel-indicators li span.ng-binding {
-        display: block;
-        height: 85px;
-        padding-top: 12px;
-        height: 85px;
-        padding-top: 12px;
-        margin-right: 10px;
-    }
+.carousel-indicators .active {
+    border: 0;
+    width: 24%;
+    text-indent: 0px;
+    color: #3c82c0;
+    background-image: url('../img/pager.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    background-color: transparent;
+    padding-top: 30px;
+}
 
-    .carousel-indicators li:not(:last-child) span.ng-binding {
-        border-right-style: solid;
-        border-right-width: 1px;
-        border-right-color: #EFEFEF;
-    }
+.carousel-control {
+    opacity: 1;
+    text-shadow: none;
+}
 
-    .carousel-indicators .active {
-        border: 0;
-        width: 24%;
-        text-indent: 0px;
-        color: #3c82c0;
-        background-image: url('../img/pager.png');
-        background-repeat: no-repeat;
-        background-position: 50% 0px;
-        background-color: transparent;
-        padding-top: 30px;
-    }
+.carousel-control .glyphicon-chevron-right {
+    width: 65px;
+    height: 62px;
+    border: solid;
+    padding-top: 17px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border-width: 1px;
+    position: absolute;
+    top: 250px;
+    background-image: url(../img/rightarrow.png);
+    font-size: 0px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position-x: 16px;
+    background-position-y: 18px;
+}
 
-    .carousel-control {
-        opacity: 1;
-        text-shadow: none;
-    }
-
-     .carousel-control .glyphicon-chevron-right {
+ .carousel-control .glyphicon-chevron-left {
         width: 65px;
         height: 62px;
         border: solid;
@@ -73,7 +88,7 @@
         border-width: 1px;
         position: absolute;
         top: 250px;
-        background-image: url(../img/rightarrow.png);
+        background-image: url(../img/leftarrow.png);
         font-size: 0px;
         display: block;
         background-repeat: no-repeat;
@@ -81,47 +96,13 @@
         background-position-y: 18px;
     }
 
-        .carousel-control .glyphicon-chevron-left {
-            width: 65px;
-            height: 62px;
-            border: solid;
-            padding-top: 17px;
-            margin-bottom: 10px;
-            border-radius: 50%;
-            border-width: 1px;
-            position: absolute;
-            top: 250px;
-            background-image: url(../img/leftarrow.png);
-            font-size: 0px;
-            display: block;
-            background-repeat: no-repeat;
-            background-position-x: 16px;
-            background-position-y: 18px;
-        }
-
-        .spdm_topcarousel_subheading {
-            padding-bottom:50px;
-        }
-    
-
-/*desktop view*/
-@media (min-width: 767px) {
-    .carousel-caption{
-        padding-bottom:110px;
+    .spdm_topcarousel_subheading {
+        padding-bottom:50px;
     }
 
-    .spdm_topcarousel_col {
-        width:1050px;
-    }
-  
-}
-
-
-
-/*mobile view*/
-@media (max-width: 414px) {
     .spdm_topcarousel_col {
         padding-right: 0px;
+        padding-left: 0px;
     }
 
     .spdm_topcarousel_image {
@@ -170,4 +151,110 @@
     .carousel-indicators li:not(:last-child) span.ng-binding {
         border-right-style:none;
     }
+/*end-minimum view port*/
+
+/*start-desktop view*/
+@media (min-width: 1200px) {
+    .carousel-caption{
+        padding-bottom:110px;
+    }
+
+    .spdm_topcarousel_col {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .spdm_topcarousel_image {
+        width: 100%;
+        height: 545px;
+        margin-top:0px !important;
+        margin-left:0px !important;
+    }
+
+      .spdm_topcarousel_heading {
+        display: block;
+    }
+
+    .spdm_topcarousel_subheading {
+        display: block;
+    }
+
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
 }
+
+  .carousel-indicators {
+    bottom: 20px;
+    top: 512px;
+    margin-left: 0px;
+    left: 0;
+    width: 100%;
+}
+
+
+.carousel-indicators li {
+    display: inline-block;
+    height: 10px;
+    cursor: pointer;
+    border: 0;
+    width: 24%;
+    border-radius: 0px;
+    margin: 0px;
+    text-indent: 0px;
+    line-height: 14px;
+    vertical-align: bottom;
+    background-color: transparent;
+    padding-top: 50px;
+}
+
+.carousel-indicators .active {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.carousel-indicators li span.ng-binding {
+    display: block;
+    height: 85px;
+    padding-top: 12px;
+    height: 85px;
+    padding-top: 12px;
+    margin-right: 10px;
+}
+
+.carousel-indicators li:not(:last-child) span.ng-binding {
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #EFEFEF;
+}
+.carousel-indicators .active {
+    display: inline-block;
+    border: 0;
+    width: 24%;
+    text-indent: 0px;
+    color: #3c82c0;
+    background-image: url(../img/pager.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    background-color: transparent;
+    padding-top: 30px;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+}
+
+/*end-desktop view*/
+
+
+
+

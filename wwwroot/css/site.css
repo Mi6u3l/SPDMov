@@ -61,7 +61,11 @@ html {
   min-height: 100%;
 }
 
-
+/*bootstrap overrides*/
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
 
 .footer {
   position: absolute;
@@ -69,6 +73,140 @@ html {
   width: 100%;
   height: 184px;
 }
+
+/*start-minimum view port*/
+ .body{
+     padding-top:79px;
+ }
+
+  .container {
+     padding-left:0px;
+     padding-right:14px;
+ }
+
+  .spdm_footer_logo {
+      display:none;
+  }
+
+  .spdm_footer_links1 {
+      display:none;
+  }
+
+  .spdm_footer_links2 {
+      display:none;
+  }
+
+  .spdm_footer_wrapper {
+      width: 100%;
+        background-size: 140%;
+        display: block;
+        height: 240px;
+        line-height: 0px;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 31px;
+      background-image: url(../img/bluestripes.png);
+    }
+
+  footer .container {
+      padding-right: 0px !important;
+  }
+
+  .spdm_footer_wrapper div {
+    color: #fff;
+    text-align: left;
+    }
+
+  .spdm_footer_newsletter_title {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 13px;
+   }
+
+   .spdm_footer_newsletter div {
+    width: 100% !important;
+    line-height: 20px;
+    }
+
+  .spdm_footer_newsletter_button {
+      display:block;
+          background-color: #1a3e5d;
+    width: 34px !important;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 14px;
+    padding: 9px;
+    cursor: pointer;
+  }
+
+    .spdm_footer_newsletter_submit {
+        padding-top: 14px;
+        display: inline-flex;
+    }
+
+   .spdm_footer_newsletter_submit input {
+       background-color: #264e71;
+    height: 34px;
+    width: 180px;
+    border-width: 0px;
+    padding-left: 7px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+    }
+
+  .spdm_footer_logo_mobile {
+      display:inline-flex;
+      padding-left:0px !important;
+      padding-right:0px !important;
+      padding-top: 21px;
+      line-height: 18px;
+      width:100%;
+
+  }
+
+  .spdm_footer_logo_mobile div {
+    width: 50%;
+    padding: 0px;
+}
+
+     .spdm_footer_logo_mobile img {
+        width: 150px;
+    }
+/*end-minimum view port*/
+
+/* start-desktop view */
+@media (min-width: 1200px) {
+
+    body {
+        padding-top: 100px;
+        margin-bottom: 184px;
+    }
+
+    .container {
+        width: 1021px;
+        padding-right:0px;
+    }
+
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        margin-left: -25px;
+    }
+
+    .spdm_footer_logo_mobile {
+        display: none;
+    }
+
+    .spdm_footer_links1 {
+      display:block;
+    }
+
+    .spdm_footer_links2 {
+      display:block;
+   }
+
+    .spdm_footer_logo {
+      display:block;
+  }
 
 .spdm_footer_logo div {
     width: 85% !important;
@@ -156,12 +294,13 @@ div a, a:hover, a:active, a:visited {
 
 .spdm_footer_wrapper {
     background-image: url('../img/bluestripes.png');
-    width: 1021px;
+    width: 100%;
     height: 184px;
     display: inline-flex;
     padding-top: 31px;
     line-height: 40px;
     padding-left: 18px;
+    padding-right: 0px;
 }
 
 .spdm_footer_wrapper div {
@@ -169,95 +308,7 @@ div a, a:hover, a:active, a:visited {
     color: #fff;
     text-align: left;
 }
-
-/* desktop view */
-@media (min-width: 768px) {
-
-    body {
-        padding-top: 100px;
-        margin-bottom: 184px;
-    }
-
-    .container {
-        width: 1021px;
-        padding-right:0px;
-    }
-
-    .spdm_footer_logo_mobile {
-        display: none;
-    }
-
 }
-
-/*mobile view*/
-@media (max-width: 414px) {
- .body{
-     padding-top:79px;
- }
-
-  .container {
-     padding-left:0px;
-     padding-right:14px;
- }
-
-  .spdm_footer_logo {
-      display:none;
-
-  }
-
-  .spdm_footer_links1 {
-      display:none;
-  }
-
-  .spdm_footer_links2 {
-      display:none;
-  }
-
-  .spdm_footer_wrapper {
-      width:100%;
-      background-size: 140%;
-      display:block;
-      height: 240px;
-      line-height: 0px;
-      padding-left: 10%;
-      padding-right: 10%;
-    }
-
-  footer .container {
-      padding-right: 0px !important;
-  }
-
-  .spdm_footer_wrapper div {
-      width:100%;
-
-  }
-
-  .spdm_footer_newsletter_button {
-      display:block;
-  }
-
-   .spdm_footer_newsletter_submit input {
-       width:100%;
-    }
-
-  .spdm_footer_logo_mobile {
-      display:inline-flex;
-      padding-left:0px !important;
-      padding-right:0px !important;
-      padding-top: 21px;
-      line-height: 18px;
-      width:100%;
-
-  }
-
-    .spdm_footer_logo_mobile div {
-        width: 50%;
-        padding:0px;
-    }
-
-     .spdm_footer_logo_mobile img {
-        width: 150px;
-    }
-}
+/* end-desktop view */
 
 
