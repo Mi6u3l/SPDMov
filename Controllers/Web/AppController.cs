@@ -21,6 +21,7 @@ namespace SPDMov.Controllers.Web
         
         public IActionResult Article()
         {
+            ViewBag.ArticleId = RouteData.Values["id"];
             return View();
         }
     }

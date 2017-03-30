@@ -3,14 +3,33 @@
 }
 
 @section Scripts {
-  
+   <script src="~/lib/angular/angular.min.js"></script>
+   <script src="~/lib/angular-route/angular-route.min.js"></script>
+   <script src="~/js/configSettings.js"></script>
+   <script src="~/js/article/articleController.js"></script>
+   <script src="~/js/article/articleFactory.js"></script>
+
 }
 
 
 @section AddToHead{
-   
+     <link href="~/css/article.css" rel="stylesheet" type="text/css" />
 }
 
-<div>
-    hello
+<div ng-app="app-article" ng-controller="articleController" >
+    <div ng-init="articleId = '@ViewBag.ArticleId'">
+     <div class="row">
+        <div class="col-md-12">
+            <div class="spdm_article_title">
+                {{ title }}
+            </div>
+             <div class="spdm_article_subtitle">
+                {{ subtitle }}
+            </div>
+            <div ng-bind-html="body" class="spdm_article_body">
+                {{ body }}
+            </div>
+        </div>
+     </div>
+     
 </div>

@@ -9,8 +9,10 @@ app.directive('setCarouselPaging', ['$timeout', function ($timeout) {
                         var controllerScope = $scope.$$childHead;
                         var slides = controllerScope.slides;
                         $("span.ng-binding").each(function (index) {
-                            $(this).text(slides[index].Paging);
-                            $(this).removeClass('sr-only');
+                            if (slides[index] != undefined) {
+                                $(this).text(slides[index].Paging);
+                                $(this).removeClass('sr-only');
+                            }
                          });
                     }());
                 }, 500, false);

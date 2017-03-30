@@ -9,6 +9,7 @@
     "angular": "~1.6.2",
     "angular-bootstrap": "~2.5.0",
     "angular-google-maps": "~2.4.1",
-    "lodash": "~4.17.4"
+    "lodash": "~4.17.4",
+    "angular-route": "~1.5.7"
   }
 }
