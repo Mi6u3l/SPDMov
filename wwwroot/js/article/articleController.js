@@ -1,9 +1,8 @@
 "use strict";
-var app = angular.module("app-article", ['configSettings']);
 app.controller("articleController", articleController);
-
 function articleController($scope, articleFactory, $sce, env) {
     $scope.body;
+    $scope.env = env;
     $scope.$watch('articleId', function () {
         articleFactory.getArticleContent($scope.articleId, env)
             .then(function (response) {

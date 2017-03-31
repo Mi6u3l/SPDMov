@@ -1,5 +1,4 @@
 "use strict";
-var app = angular.module("app-network");
 app.controller('networkController', function($scope, $http, $window) {
     $scope.detail = [];
     $scope.locations = [];

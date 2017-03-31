@@ -1,5 +1,4 @@
 "use strict";
-var app = angular.module("app-homepage");
 app.directive('setCarouselPaging', ['$timeout', function ($timeout) {
     return {
         link: function ($scope, element, attrs) {

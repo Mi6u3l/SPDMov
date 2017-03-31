@@ -1,5 +1,4 @@
 "use strict";
-var app = angular.module("app-article");
 app.factory('articleFactory', function($http) {
     var articleFactory = {};
     articleFactory.getArticleContent = function (articleTitle, env) {

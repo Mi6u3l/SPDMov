@@ -1,4 +1,2 @@
 ﻿'use strict';
-(function () {
-    angular.module('app-network', []);
-})();
+angular.module('app-network', []);

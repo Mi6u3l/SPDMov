@@ -1,4 +1,3 @@
-﻿(function () {
-    "use strict";
-    angular.module("app-homepage", ['ui.bootstrap']);
-})();
+﻿"use strict";
+var app = angular.module("app-homepage", ['ui.bootstrap', 'configSettings']);
+

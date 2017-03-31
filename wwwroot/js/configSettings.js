@@ -4,4 +4,6 @@ angular.module('configSettings', [])
   'backofficeURL': 'http://23.94.156.22:8090',
   'menuArticleList': 'Article Menu',
   'topCarouselList': 'TopCarousel',
+  'newsList': 'News',
+  'eventsCarouselList' : 'Events'
 });

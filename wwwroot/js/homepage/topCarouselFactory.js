@@ -1,5 +1,4 @@
 "use strict";
-var app = angular.module("app-homepage");
 app.factory('topCarouselFactory', function($http) {
     var topCarouselFactory = {};
     topCarouselFactory.getTopCarouselItems = function (env) {
@@ -10,7 +9,6 @@ app.factory('topCarouselFactory', function($http) {
            headers:  { "Accept": "application/json;odata=verbose" }
        });
 };
-
     return topCarouselFactory;  
 });
     
