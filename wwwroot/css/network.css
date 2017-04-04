@@ -1,12 +1,11 @@
-﻿.spdm_network_image{
+﻿.spdm_network_image {
     padding-left: 0px;
     padding-right: 0px;
 }
 
-.spdm_network_image img{
-    width:100%;
+.spdm_network_image img {
+    width: 100%;
 }
-
 
 .spdm_network_search {
     background-color: #30618c;
@@ -20,57 +19,52 @@
 .spdm_network_search button {
     font-size: 12px;
     background-color: #30618c;
-    border-color:#fff;
-    margin-right:20px;
-    width:136px;
-    color:#fff;
+    border-color: #fff;
+    margin-right: 20px;
+    width: 136px;
+    color: #fff;
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
     padding: 4px;
     width: 130px;
-    letter-spacing:2px;
+    letter-spacing: 2px;
 }
 
 .spdm_network_search button:focus {
-    color:#fff;
-
+    color: #fff;
 }
 
 .spdm_network_dropdown_location {
-    float:left;
+    float: left;
 }
 
 spdm_network_dropdown_treatment {
-    float:left;
+    float: left;
 }
 
 .spdm_network_dropdown_treatment ul {
     margin-top: 37px;
-   
 }
-
 
 .spdm_network_dropdown_treatment button {
-    margin-right:20px;
+    margin-right: 20px;
 }
 
-
 .spdm_network_dropdown_location ul {
-    margin-top:37px;
+    margin-top: 37px;
 }
 
 .spdm_network_dropdown_location button {
-    margin-left:20px;
+    margin-left: 20px;
 }
 
-
 .spdm_network_result {
-    display:inline-flex;
-    width:100%;
+    display: inline-flex;
+    width: 100%;
     padding-left: 0px;
     padding-right: 0px;
-} 
+}
 
 .spdm_network_map {
     width: 100%;
@@ -94,7 +88,6 @@ spdm_network_dropdown_treatment {
     background-color: #3d81c0;
     position: absolute;
     cursor: pointer;
-  
 }
 
 .spdm_network_closedetails i {

@@ -1,9 +1,8 @@
 ﻿/*start-minimum view port*/
-.spdm_searchimage_col span {
-     
- }
 
-.spdm_searchimage_col  {
+.spdm_searchimage_col span {}
+
+.spdm_searchimage_col {
     background-image: url(../img/imagemrede.png);
     background-size: 600px;
     background-position-x: -90px;
@@ -17,11 +16,11 @@
     background-repeat: no-repeat;
 }
 
- .spdm_searchimage_button {
+.spdm_searchimage_button {
     padding-top: 30px;
- }
+}
 
- .spdm_searchimage_button button {
+.spdm_searchimage_button button {
     background-color: transparent;
     font-size: 20px;
     font-weight: normal;
@@ -31,33 +30,38 @@
     width: 160px;
     padding: 0px;
     height: 50px;
-    outline:none;
- }
+    outline: none;
+}
+
 
 /*end-minimum view port*/
 
+
 /*start-horizontal mobile view*/
+
 @media (min-width: 568px) {
     .spdm_searchimage_col {
         background-position-x: 0px;
         background-size: 100%;
     }
 }
-/*start-horizontal mobile view*/
+
+
+/*end-horizontal mobile view*/
+
 
 /*start-desktop view*/
-@media (min-width: 1200px) {
 
-     .spdm_searchimage_col span {
+@media (min-width: 1200px) {
+    .spdm_searchimage_col span {
         display: block;
         margin-left: 210px;
         margin-right: 210px;
         line-height: 37px;
         margin-top: 148px;
         font-size: 34px;
- }
-
-   .spdm_searchimage_col  {
+    }
+    .spdm_searchimage_col {
         background-image: url('../img/imagemrede.png');
         background-size: 100%;
         height: 471px;
@@ -66,29 +70,25 @@
         color: white;
         font-size: 45px;
         font-weight: bold;
-        line-height:48px;
+        line-height: 48px;
         background-position-x: 0;
     }
-
-
- .spdm_searchimage_button {
-    padding-top: 60px;
- }
-
-  .spdm_searchimage_button button {
-    background-color: transparent;
-    font-size: 20px;
-    font-weight: normal;
-    border: solid;
-    border-radius: 25px;
-    border-width: 1px;
-    width: 160px;
-    padding: 0px;
-    height: 50px;
-    outline:none;
- }
-
+    .spdm_searchimage_button {
+        padding-top: 60px;
+    }
+    .spdm_searchimage_button button {
+        background-color: transparent;
+        font-size: 20px;
+        font-weight: normal;
+        border: solid;
+        border-radius: 25px;
+        border-width: 1px;
+        width: 160px;
+        padding: 0px;
+        height: 50px;
+        outline: none;
+    }
 }
+
+
 /*end-desktop view*/
-
-
