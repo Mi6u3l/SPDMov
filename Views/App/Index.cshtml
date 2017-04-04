@@ -49,6 +49,7 @@
                 <span class="spdm_news_title">Últimas Notícias</span>
                 <div class="spdm_news_wrapper">
                     <div ng-repeat="newsitem in news" class="spdm_news_itemwrapper">
+                        <a href="/App/NewsItem/{{ newsitem.ID }}">
                           <figure class="spdm_news_item">
                             <div class="spdm_news_origin">{{ newsitem.Origin }}</div>
                             <img src="{{ absoulteUrl + newsitem.FileRef}}" />
@@ -57,7 +58,8 @@
                                 <h4>{{ newsitem.Title }}</h4>
                                 <h5>{{ newsitem.Subtitle }}</h5>
                             </figcaption>
-                        </figure>
+                         </figure>
+                        </a>
                     </div>
                 </div>
                 <span class="spdm_news_morenews">Ler mais Notícias</span>
@@ -82,10 +84,10 @@
                             <a href="#">
                                 <div class="spdm_eventscarousel_itemwrapper col-sm-6 col-md-3">
                                     <div class="spdm_eventscarousel_itemday">
-                                        <span>{{ event.EventDate }}</span>
+                                        <span>{{ event.EventDate | date: "dd" }}</span>
                                     </div>
                                     <div class="spdm_eventscarousel_itemdescription">
-                                        <div class="spdm_eventscarousel_itemtitle">{{ event.Title }} <span class="spdm_eventscarousel_date">{{ event.EventDate }}</span></div>
+                                        <div class="spdm_eventscarousel_itemtitle">{{ event.Title }} <span class="spdm_eventscarousel_date">{{ event.EventDate | date: "dd/MM/yyyy" }}</span></div>
                                         <div class="spdm_eventscarousel_itemcaption">{{ event.Description }}</div>
                                     </div>
                                 </div>

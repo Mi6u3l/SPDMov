@@ -2,7 +2,6 @@
 app.factory('newsFactory', function($http) {
     var newsFactory = {};
     newsFactory.getNewsItems = function (env) {
-       console.log('in news factory');
        var urlBase = env.backofficeURL + "/_api/lists/getbytitle('" + env.newsList + "')"
        return $http ({
            method: 'GET',

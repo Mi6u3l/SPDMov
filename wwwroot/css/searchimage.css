@@ -36,6 +36,14 @@
 
 /*end-minimum view port*/
 
+/*start-horizontal mobile view*/
+@media (min-width: 568px) {
+    .spdm_searchimage_col {
+        background-position-x: 0px;
+        background-size: 100%;
+    }
+}
+/*start-horizontal mobile view*/
 
 /*start-desktop view*/
 @media (min-width: 1200px) {

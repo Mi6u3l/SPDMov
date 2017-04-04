@@ -61,6 +61,14 @@ html {
   min-height: 100%;
 }
 
+h4 {
+    color: #000;
+}
+
+h5 {
+    color: #000;
+}
+
 /*bootstrap overrides*/
 .row{
     margin-left: 0px;
@@ -174,6 +182,20 @@ html {
         width: 150px;
     }
 /*end-minimum view port*/
+@media (min-width: 568px) {
+    .spdm_footer_newsletter_submit input {
+        width: 300px;
+    }
+
+    .spdm_footer_logo_mobile div {
+        width: initial;
+    }
+
+    .spdm_footer_logo_mobile img {
+        width: 150px;
+        margin-left: 30px;
+    }
+}
 
 /* start-desktop view */
 @media (min-width: 1200px) {

@@ -25,7 +25,7 @@ app.directive('initEventsCarousel', ['$timeout', function ($timeout) {
                             }
                         });
                     }());
-                }, 200, false);
+                }, 500, false);
         }
     };
 }]);

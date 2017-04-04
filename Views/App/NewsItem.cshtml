@@ -1,0 +1,38 @@
+@{
+    ViewBag.Title = "NewsItem";
+}
+
+@section Scripts {
+   <script src="~/lib/angular/angular.min.js"></script>
+   <script src="~/js/configSettings.js"></script>
+   <script src="~/js/newsitem/app-newsitem.js"></script>
+   <script src="~/js/newsitem/newsitemController.js"></script>
+   <script src="~/js/newsitem/newsitemFactory.js"></script>
+
+}
+
+
+@section AddToHead{
+     <link href="~/css/newsitem.css" rel="stylesheet" type="text/css" />
+}
+
+<div ng-app="app-newsitem" ng-controller="newsitemController" >
+    <div ng-init="newsItemId = '@ViewBag.NewsItemId'">
+     <div class="row">
+        <div class="spdm_newsitem_col col-md-12">
+            <div class="spdm_newsitem_title">
+                {{ title }}
+            </div>
+             <div class="spdm_newsitem_subtitle">
+                {{ subtitle }}
+            </div>
+            <div ng-bind-html="body" class="spdm_newsitem_body">
+                {{ body }}
+            </div>
+            <div class="spdm_newsitem_image">
+                 <img src="{{ absoulteUrl + imageUrl}}" />
+            </div>
+        </div>
+     </div>      
+   </div>
+</div>

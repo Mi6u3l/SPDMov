@@ -5,7 +5,7 @@ app.factory('eventsCarouselFactory', function($http) {
        var urlBase = env.backofficeURL + "/_api/lists/getbytitle('" + env.eventsCarouselList + "')"
        return $http ({
            method: 'GET',
-           url: urlBase + '/items?$select=ID,Title,EventDate,Description ',
+           url: urlBase + '/items?$select=ID,Title,EventDate,Description&$top=10&$orderby=EventDate desc',
            headers:  { "Accept": "application/json;odata=verbose" }
        });
 };

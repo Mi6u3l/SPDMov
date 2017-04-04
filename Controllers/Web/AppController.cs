@@ -17,11 +17,16 @@ namespace SPDMov.Controllers.Web
         {
             return View();
         }
-
-        
+ 
         public IActionResult Article()
         {
             ViewBag.ArticleId = RouteData.Values["id"];
+            return View();
+        }
+
+        public IActionResult NewsItem()
+        {
+            ViewBag.NewsItemId = RouteData.Values["id"];
             return View();
         }
     }

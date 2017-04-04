@@ -9,7 +9,6 @@
         color:#000;
 
   }
-
   .spdm_eventscarousel_itemwrapper {
       background-image:none;
       display: inline-flex;
@@ -63,11 +62,11 @@
 }
 .carousel-showmanymoveone .carousel-control.left {
   margin-left: 0px;
-  color:#000;
+  color:#000 !important;
 }
 .carousel-showmanymoveone .carousel-control.right {
   margin-right: 0px;
-  color:#000;
+  color:#000 !important;
 }
 .carousel-showmanymoveone .cloneditem-1,
 .carousel-showmanymoveone .cloneditem-2,
@@ -172,7 +171,15 @@
 }
 /*end-oob styles*/
 
+/*start-horizontal mobile view*/
+@media (min-width: 568px) {
+  .spdm_eventscarousel_itemwrapper {
+    width: initial;
+  }
+}
+/*end-horizontal mobile view*/
 
+/* start-desktop view */
 @media (min-width: 1200px) {
 
   .carousel-showmanymoveone .carousel-control.right {
@@ -245,15 +252,21 @@
 
 
 .spdm_eventscarousel_rightarrow {
-    top: 28px !important;
-    left: 0px;
+    top: 9px !important;
     border: none !important;
     font-size: 17px !important;
-    background-image:none !important
+    background-image: none !important;
+    background: white;
+    height: 96px !important;
+    padding-bottom: 36px !important;
+    padding-top: 37px !important;
+    left: 23px;
+    border-radius: 0px !important;
+    width: 30px !important;
 }
 
  .spdm_eventscarousel_col {
        height:260px;
   }
 }
-
+/* end-desktop view */

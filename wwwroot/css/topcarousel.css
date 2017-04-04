@@ -98,6 +98,7 @@
 
     .spdm_topcarousel_subheading {
         padding-bottom:50px;
+        color:#fff;
     }
 
     .spdm_topcarousel_col {
@@ -152,6 +153,18 @@
         border-right-style:none;
     }
 /*end-minimum view port*/
+
+/*start-horizontal mobile view*/
+@media (min-width: 568px) {
+    .spdm_topcarousel_image {
+        width: 100%;
+        margin-left: 0px !important;
+    }
+
+}
+
+/*end-horizontal mobile view*/
+
 
 /*start-desktop view*/
 @media (min-width: 1200px) {

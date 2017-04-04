@@ -7,8 +7,9 @@ app.directive('setArticleImages', ['$timeout', function ($timeout) {
                          $('img').each(function() {  
                          var imgsrc = this.src;
                          if (imgsrc.indexOf('/PublishingImages')  != -1 ) {
+                            $(this).addClass('img-responsive');
                             this.src = controller.env.backofficeURL + "/" + imgsrc.substr(imgsrc.indexOf('/PublishingImages'));
-                         }
+                        }
                         });  
                     }());
                 }, 300, false);

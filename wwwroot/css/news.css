@@ -84,11 +84,10 @@
 
 
 /*start-horizontal mobile view */
-@media (min-width: 576px) {
+@media (min-width: 568px) {
 
     .spdm_news_wrapper {
       padding-left: 17px;
-      width: 238px;
       margin: 0 auto;
   }
 
@@ -108,6 +107,11 @@
     }
 }
 /* end-mobile view */
+@media (min-width: 568px) {
+    .spdm_news_row {
+        padding-top: 110px;
+    }
+}
 
 /* start-desktop view*/
 @media (min-width: 1200px) {
