@@ -25,7 +25,12 @@
 
 /*end-minimum view port*/
 
-
+/*start-tablet view */
+@media (min-width: 768px) {
+  .spdm_newsitem_title {
+    padding-top: 100px;
+}
+}
 /* start-desktop view */
 
 @media (min-width: 1200px) {

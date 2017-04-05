@@ -165,14 +165,31 @@
         margin-left: 0px !important;
     }
 }
-
-
 /*end-horizontal mobile view*/
 
+/*start-tablet view*/
+@media (min-width: 768px) {
+    .spdm_topcarousel_heading {
+        display: block;
+}
 
-/*start-desktop view*/
+    .spdm_topcarousel_subheading {
+        display: block;
+    }
+}
+/*end-tablet view*/
 
-@media (min-width: 1200px) {
+/*start-horizontal tablet view*/
+@media (min-width: 1024px) {
+    
+    .carousel-control .glyphicon-chevron-left {
+    top:290px;
+    }
+
+  .carousel-control .glyphicon-chevron-right {
+    top: 290px;
+    }
+
     .carousel-caption {
         padding-bottom: 110px;
     }
@@ -241,6 +258,7 @@
         border-right-style: solid;
         border-right-width: 1px;
         border-right-color: #EFEFEF;
+        padding-right: 10px;
     }
     .carousel-indicators .active {
         display: inline-block;
@@ -252,11 +270,10 @@
         background-repeat: no-repeat;
         background-position: 50% 0px;
         background-color: transparent;
-        padding-top: 30px;
+        padding-top: 29px;
         font-size: 14px;
         line-height: 14px;
     }
 }
 
-
-/*end-desktop view*/
+/*end-horizontal tablet view*/

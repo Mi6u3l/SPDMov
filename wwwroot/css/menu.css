@@ -7,7 +7,6 @@
 
 
 /* bootstrap overrides */
-
 .dropdown-menu {
     top: 71px;
     border: 0px;
@@ -29,7 +28,6 @@
 
 
 /*start-minimum view port*/
-
 .navbar-fixed-top {
     height: 80px
 }
@@ -76,7 +74,7 @@
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    background-image: url(../img/bluestripes.png);
+    background-image: url(../img/backgroundmobile.png);
     background-size: 760px 800px;
     max-height: 100%;
 }
@@ -134,14 +132,148 @@ div a, a:hover, a:active, a:visited {
 .fa {
     display: none;
 }
-
-
 /*end-minimum view port*/
 
 
-/* start-desktop view */
+/*start-tablet view */
+@media (min-width: 768px) {
+    .nav > li > a {
+        padding:0px;
+        padding-top:13px;
+    }
+     .navbar-brand img {
+        position: relative;
+        bottom: initial;
+    }
+    .navbar-default {
+        height: 100px;
+        background-color: #ffffff;
+        border-color: transparent;
+    }
+    .navbar .navbar-nav {
+        display: inline-block;
+        padding-top: 25px;
+        text-transform: none;
+        text-align: center;
+        font-weight: normal;
+        font-size: 14px;
+        float: none;
+    }
+    .navbar-nav .open .dropdown-menu {
+        display: inline-block;
+        text-align: left;
+        font-size: inherit;
+    }
+    .navbar-nav > li > a {
+        line-height: 16px;
+    }
+    .navbar .navbar-collapse {
+        text-align: right;
+        padding-top: 4px;
+    }
+    .navbar-brand {
+        position: absolute;
+        bottom: 55px;
+        padding-top: 21px;
+    }
+    .navbar-toggle {
+        z-index: 3;
+    }
+    .navbar-default .navbar-nav > li > a {
+        color: #000 !important;
+    }
+    .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+        background-color: #fff;
+        border-color: transparent;
+    }
+    .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+    }
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        background-image: none;
+        background-size: 760px 800px;
+    }
+    .active {
+        text-decoration: none;
+    }
+    .open {
+        text-decoration: none !important;
+        color: #000;
+    }
+    .fa {
+        display: inline-block;
+    }
+    /* spdm elements */
+    .spdm_oneline_listitem {
+        padding-top: 8px;
+    }
+    .spdm_toplevel_listitem {
+        height: 64px;
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-right-color: #EFEFEF;
+        width: 94px;
+        text-align: center;
+        color: #7A7B7D;
+        font-size: 1em;
+        line-height: 14px;
+    }
+    .spdm_toplevel_listitem a {
+        background-color: transparent !important;
+        color: #000 !important;
+        text-decoration: none;
+    }
+    .spdm_toplevel_listitem_last {
+        border-right-style: none;
+    }
+    .spdm_toplevel_wrapper {
+        padding-top: 22px;
+        margin-left: 10px;
+        width: 73px;
+        height: 85%;
+    }
+    .spdm_toplevel_last {
+        padding-top: 18px;
+        margin-left: 10px;
+        width: 100px;
+        height: 85%;
+    }
+    .spdm_toplevel_active {
+        border-bottom-style: solid;
+        border-bottom-color: #466D94;
+        border-bottom-width: 2px;
+        text-decoration: none;
+    }
+    .spdm_listitem_redecuidados {
+        padding-top: 15px;
+    }
+    .spdm_button_redecuidados {
+        width: 146px;
+        height: 37px;
+        padding: 0px 12px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        color: #fff;
+        background-color: #3D81C0;
+        font-size: 1.1em;
+        display: none;
+    }
+    .spdm_listitem_pesquisa {
+        padding-top: 0px;
+    }
+    .spdm_listitem_pesquisa img {
+        width: 40px;
+    }
+    .spdm_listitem_mobile {
+        display: none !important;
+    }
+}
+/*end-tablet view */
 
-@media (min-width: 1200px) {
+/* start-horizontal tablet view */
+@media (min-width: 1024px) {
     .navbar-brand img {
         position: relative;
         bottom: initial;
@@ -258,7 +390,7 @@ div a, a:hover, a:active, a:visited {
         color: #fff;
         background-color: #3D81C0;
         font-size: 1.1em;
-        display: block;
+        display: none;
     }
     .spdm_listitem_pesquisa {
         padding-top: 0px;
@@ -270,6 +402,12 @@ div a, a:hover, a:active, a:visited {
         display: none !important;
     }
 }
+/* end-horizontal tablet view */
 
-
+/* start-desktop view */
+@media (min-width: 1200px) {
+      .spdm_button_redecuidados {
+        display: block
+    }
+}
 /* end-desktop view */

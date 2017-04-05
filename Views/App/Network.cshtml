@@ -27,7 +27,7 @@
            <div class="spdm_network_dropdown_treatment">
                <button class="dropdown-toggle" type="button" data-toggle="dropdown">
                    TRATAMENTO
-                   <span class="fa fa-chevron-down fa-1"></span>
+                   <span class="spdm_network_dropdownchevron fa fa-chevron-down fa-1"></span>
                </button>
                <ul class="dropdown-menu">
                    <li ng-repeat="treatment in treatments"><a href="">{{ treatment.name }}</a></li>
@@ -36,7 +36,7 @@
            <div class="spdm_network_dropdown_location">
                <button class="dropdown-toggle" type="button" data-toggle="dropdown">
                    LOCALIDADE
-                   <span class="fa fa-chevron-down fa-1"></span>
+                   <span class="spdm_network_dropdownchevron fa fa-chevron-down fa-1"></span>
                </button>
                <ul class="dropdown-menu">
                   <li ng-repeat="location in locations" ng-click="centerMap(location.coordinates, location.name)" value="{{ location.coordinates }}"><a href="">{{ location.name }}</a></li>

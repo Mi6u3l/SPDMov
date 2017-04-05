@@ -1,4 +1,4 @@
-﻿    /*start-minimum view port*/
+﻿/*start-minimum view port*/
 
 .spdm_news_morenews {
     background-color: #264e72;
@@ -96,21 +96,32 @@
     .spdm_news_morenews {
         padding-left: 0px;
         padding-right: 0px;
-        width: 206px;
+        width: 450px;
+        margin-right: 10px;
     }
     .spdm_news_col {
         margin-right: 0px;
     }
 }
-
-
 /* end-mobile view */
 
+/* start-horizontal mobile view */
 @media (min-width: 568px) {
     .spdm_news_row {
         padding-top: 110px;
     }
 }
+/* end-horizontal mobile view */
+
+
+/* start-tablet view */
+@media (min-width: 768px) {
+    .spdm_news_morenews {
+        width: 220px;
+    }
+}
+/* end-tablet view */
+
 
 
 /* start-desktop view*/

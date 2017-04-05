@@ -174,12 +174,48 @@
   }
 }
 
-
 /*end-horizontal mobile view*/
 
+/* start-horizontal tablet view */
+@media (min-width: 1024px) {
+  .spdm_eventscarousel_itemwrapper {
+    display: inline-flex;
+    width: 230px;
+    background-image: url(../img/agendaitemborder.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.carousel-showmanymoveone .carousel-control.right {
+    display: block;
+}
+
+.carousel-showmanymoveone .carousel-control.left {
+    display: block;
+}
+ .spdm_eventscarousel_leftarrow {
+    top: 28px !important;
+    left: -20px !important;
+    border: none !important;
+    font-size: 17px !important;
+    background-image: none !important;
+  }
+  .spdm_eventscarousel_rightarrow {
+    top: 9px !important;
+    border: none !important;
+    font-size: 17px !important;
+    background-image: none !important;
+    background: white;
+    height: 96px !important;
+    padding-bottom: 36px !important;
+    padding-top: 37px !important;
+    left: 21px;
+    border-radius: 0px !important;
+    width: 30px !important;
+  }
+}
+/* end-horizontal tablet view */
 
 /* start-desktop view */
-
 @media (min-width: 1200px) {
   .carousel-showmanymoveone .carousel-control.right {
     display: block;

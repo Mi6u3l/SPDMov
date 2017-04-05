@@ -21,10 +21,15 @@
 }
 
 .spdm_article_body {}
-
-
 /*end-minimum view port*/
 
+/*start-tablet view */
+@media (min-width: 768px) {
+  .spdm_article_col {
+        padding-bottom: 0px;
+    }
+}
+/*end-tablet view */
 
 /* start-desktop view */
 
