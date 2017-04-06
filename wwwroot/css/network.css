@@ -83,17 +83,22 @@
 .spdm_network_details {
     background-color: #3d81c0;
     height: 429px;
-    width: 511px;
+    width: 100%;
     position: absolute;
     z-index: 1;
     right: 0%;
     color: #fff;
 }
 
+.spdm_network_details img {
+    width: 100%;
+}
+
+
 .spdm_network_closedetails {
     width: 31px;
     height: 30px;
-    left: 94%;
+    right: 0px;
     background-color: #3d81c0;
     position: absolute;
     cursor: pointer;
@@ -102,7 +107,8 @@
 .spdm_network_closedetails i {
     font-size: 20px;
     padding-top: 4px;
-    padding-left: 7px;
+    padding-left: 8px;
+    display: block;
 }
 
 .spdm_network_detail_title {
@@ -131,6 +137,11 @@
     .spdm_network_map {
         height: 515px;
     }
+
+    .spdm_network_details {
+        width: 50%;
+        height: 331px;
+    }
 }
 /*end-tablet view port/*
 
@@ -146,6 +157,10 @@
 @media (min-width: 1200px) {
     .spdm_network_image {
         padding-top: 0px;
+    }
+
+    .spdm_network_details {
+        height: 515px;
     }
 }
 /*end-desktop view */
