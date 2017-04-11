@@ -66,6 +66,11 @@ h5 {
 }
 
 
+:-moz-placeholder { color: #fff; }
+:-ms-input-placeholder { color: #fff; }
+::-moz-placeholder { color: #fff; }
+::-webkit-input-placeholder { color: #fff; }
+
 /*bootstrap overrides*/
 
 .row {
@@ -131,9 +136,9 @@ footer .container {
     padding-bottom: 13px;
 }
 
-.spdm_footer_newsletter div {
-    width: 100% !important;
-    line-height: 20px;
+.spdm_footer_newsletter label {
+    width: 98% !important;
+    line-height: 17px;
 }
 
 .spdm_footer_newsletter_button {
@@ -143,12 +148,12 @@ footer .container {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     font-size: 14px;
-    padding: 9px;
+    padding: 10px;
     cursor: pointer;
 }
 
 .spdm_footer_newsletter_submit {
-    padding-top: 14px;
+    width: 100%;
     display: inline-flex;
 }
 
@@ -162,6 +167,17 @@ footer .container {
     border-bottom-left-radius: 5px;
     outline: none;
 }
+
+   .spdm_footer_newsletter_submit button {
+        height: 32px;
+        width: 32px;
+        padding-bottom: 9px;
+        border: 0;
+        outline: 0;
+        background-color: #1a3e5d;
+        margin:0;
+        padding:0;
+    }
 
 .spdm_footer_logo_mobile {
     display: inline-flex;
@@ -181,6 +197,15 @@ footer .container {
     width: 150px;
 }
 
+
+.spdm_newsletter_emailvalidation {
+    display: block;
+    padding-top: 10px;
+}
+
+.spdm_newsletter_feedback {
+    padding-top: 10px;
+}
 
 /*end-minimum view port*/
 
@@ -243,7 +268,7 @@ footer .container {
         padding-bottom: 13px;
     }
     .spdm_footer_newsletter_submit {
-        padding-top: 14px;
+        width: 100%;
         display: inline-flex;
     }
     .spdm_footer_newsletter_button {
@@ -271,6 +296,9 @@ footer .container {
         padding-bottom: 9px;
         border: 0;
         outline: 0;
+        background-color: #1a3e5d;
+        margin:0;
+        padding:0;
     }
     div a, a:hover, a:active, a:visited {
         color: #000;
@@ -295,6 +323,17 @@ footer .container {
         color: #fff;
         text-align: left;
     }
+
+    
+    .spdm_newsletter_emailvalidation {
+        padding-top: 0px;
+    }
+
+    
+    .spdm_newsletter_feedback {
+        padding-top: 0px;
+    }
+
 }
 /*end-tablet view */
 
@@ -363,6 +402,7 @@ footer .container {
         padding-bottom: 13px;
     }
     .spdm_footer_newsletter_submit {
+        width: 100%;
         padding-top: 14px;
         display: inline-flex;
     }
@@ -372,7 +412,7 @@ footer .container {
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
         font-size: 14px;
-        padding: 9px;
+        padding: 10px;
         cursor: pointer;
     }
     .spdm_footer_newsletter_submit input {
@@ -386,7 +426,7 @@ footer .container {
         outline: none;
     }
     .spdm_footer_newsletter_submit button {
-        height: 34px;
+        height: 32px;
         width: 32px;
         padding-bottom: 9px;
         border: 0;

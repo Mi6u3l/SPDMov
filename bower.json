@@ -1,6 +1,6 @@
 {
-	"name": "asp.net",
-	"private": true,
+  "name": "asp.net",
+  "private": true,
   "dependencies": {
     "underscore": "~1.8.3",
     "jquery": "~3.1.1",
@@ -10,6 +10,11 @@
     "angular-bootstrap": "~2.5.0",
     "angular-google-maps": "~2.4.1",
     "lodash": "~4.17.4",
-    "angular-route": "~1.5.7"
+    "angular-route": "~1.5.7",
+    "jquery-validation": "latest",
+    "jquery-validation-unobtrusive": "latest"
+  },
+  "resolutions": {
+    "angular": "^1.2"
   }
 }

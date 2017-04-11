@@ -62,7 +62,7 @@
                         </a>
                     </div>
                 </div>
-                <span class="spdm_news_morenews">Ler mais Notícias</span>
+                <a href="/App/AllNews"><span class="spdm_news_morenews">Ler mais Notícias</span></a>
             </div>
         </div>
     </div>
@@ -81,17 +81,15 @@
                 <div class="carousel-inner spdm_eventscarousel_inner">
                     <div class="item" ng-repeat="event in events">
                         <div class="col-xs-12 col-sm-6 col-md-3">
-                            <a href="#">
-                                <div class="spdm_eventscarousel_itemwrapper col-sm-6 col-md-3">
-                                    <div class="spdm_eventscarousel_itemday">
-                                        <span>{{ event.EventDate | date: "dd" }}</span>
-                                    </div>
-                                    <div class="spdm_eventscarousel_itemdescription">
-                                        <div class="spdm_eventscarousel_itemtitle">{{ event.Title }} <span class="spdm_eventscarousel_date">{{ event.EventDate | date: "dd/MM/yyyy" }}</span></div>
-                                        <div class="spdm_eventscarousel_itemcaption">{{ event.Description }}</div>
-                                    </div>
+                            <div class="spdm_eventscarousel_itemwrapper col-sm-6 col-md-3">
+                                <div class="spdm_eventscarousel_itemday">
+                                    <span>{{ event.EventDate | date: "dd" }}</span>
                                 </div>
-                            </a>
+                                <div class="spdm_eventscarousel_itemdescription">
+                                    <div class="spdm_eventscarousel_itemtitle">{{ event.Title }} <span class="spdm_eventscarousel_date">{{ event.EventDate | date: "dd/MM/yyyy" }}</span></div>
+                                    <div class="spdm_eventscarousel_itemcaption">{{ event.Description }}</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

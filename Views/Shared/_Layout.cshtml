@@ -114,8 +114,7 @@
                 </div>
                 <div class="spdm_footer_newsletter">
                     <div class="spdm_footer_newsletter_title">Subscreva a nossa Newsletter</div>
-                    <div>Receba a nossa Newsletter com os melhores conteúdos.</div> 
-                    <div class="spdm_footer_newsletter_submit"><input type="text" value="E-mail" /><i class="spdm_footer_newsletter_button fa fa-envelope-o fa-1"></i></div>
+                    @Component.InvokeAsync("Newsletter").Result
                 </div>
                 <div class="spdm_footer_logo_mobile">
                     <div>Com o apoio da bolsa sem restrições de: </div>
@@ -125,11 +124,12 @@
         </div>
     </footer>
     <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
     <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <script type="text/javascript" src="~/js/site.js"></script>
     @RenderSection("scripts", false)
 
-    <script type="text/javascript" src="~/js/site.js"></script>
    
 </body>
 

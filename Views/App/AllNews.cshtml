@@ -1,0 +1,25 @@
+@{
+    ViewBag.Title = "All News";
+}
+
+@section Scripts {
+   <script src="~/lib/angular/angular.min.js"></script>
+   <script src="~/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+   <script src="~/js/configSettings.js"></script>
+   <script src="~/js/newsitem/app-allnews.js"></script>
+   <script src="~/js/newsitem/allnewsController.js"></script>
+   <script src="~/js/newsitem/allnewsFactory.js"></script>
+}
+
+
+@section AddToHead{
+    <link href="~/css/news.css" rel="stylesheet" type="text/css" />
+}
+
+<div ng-app="app-allnews" ng-controller="allnewsController">
+    <div class="spdm_allnews_row row">
+        <div class="col-md-12">
+            <ul uib-pagination total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged()"></ul>
+        </div>
+    </div>
+</div>

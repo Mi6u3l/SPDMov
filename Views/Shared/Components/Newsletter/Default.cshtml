@@ -1,0 +1,25 @@
+@model SPDMov.ViewModels.NewsletterViewModel
+@{
+    ViewBag.Title = "Newsletter";
+}
+ 
+
+@section AddToHead{
+     <link href="~/css/site.css" rel="stylesheet" type="text/css" />
+}
+
+
+<div>
+   <form asp-action="SubmitEmail" id="frmSubscribeNewsletter">
+        <a name="Newsletter"></a>
+        <label asp-for="Email">Receba a nossa Newsletter com os melhores conteúdos.</label> 
+        <div class="spdm_footer_newsletter_submit">
+            <input type="text" name="Email" id="Email" placeholder="E-mail" asp-for="Email"  />
+            <button type="submit">
+                <i class="spdm_footer_newsletter_button fa fa-envelope-o fa-1"></i>
+            </button>
+        </div>   
+    <div class="spdm_newsletter_feedback">@TempData["Result"]</div>
+    <span class="spdm_newsletter_emailvalidation" asp-validation-for="Email" ></span>
+    </form>
+</div>
