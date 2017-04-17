@@ -1,43 +1,59 @@
 "use strict";
 app.controller("allnewsController", allnewsController);
 function allnewsController($scope, env, allnewsFactory, $sce) {
-  $scope.itemsPerPage = 4;
+  $scope.absoulteUrl = env.backofficeURL;
+  $scope.itemsPerPage = 5;
   $scope.currentPage = 1;
+  $scope.allNewsIds;
+  $scope.news;
   $scope.init = function() {
         allnewsFactory.getAllNewsCount(env)
             .then(function (response) {      
                $scope.totalItems = response.data.d.ItemCount;
-               console.log($scope.totalItems)
             }, function (error) {
                 $scope.status = 'Unable to load news count: ' + error.message;
             });
-         $scope.getNewsOffSet();
+         $scope.getAllIds()
+            .then(function(response){
+                $scope.allNewsIds = response;
+                $scope.getNewsOffSet(response);
+            }
+         );       
   }
 
   $scope.setPage = function (pageNo) {
     $scope.currentPage = pageNo;
-    $scope.getNewsOffSet();
+  };
+
+  $scope.getAllIds = function() {
+        return allnewsFactory.getAllIds(env)
+            .then(function (response) {      
+                return response.data.d.results;
+            }, function (error) {
+                $scope.status = 'Unable to load ids: ' + error.message;
+            });
   };
 
   $scope.pageChanged = function() {  
-      $scope.getNewsOffSet();   
+      $scope.getNewsOffSet($scope.allNewsIds);   
   };
 
-  $scope.getNewsOffSet = function() {
-        //get chunck of news
+  $scope.getNewsOffSet = function(allidsResponse) {
      var startIndex = ($scope.currentPage - 1) * $scope.itemsPerPage;
      var endIndex = startIndex + $scope.itemsPerPage;
-     console.log('startindex ' + startIndex);
-     console.log('endindex ' + endIndex);
-     allnewsFactory.getNewsOffSet(env, startIndex, endIndex)
-          .then(function (response) {    
-               //$scope.NewsItems;
-               console.log(response)
+     var startId = allidsResponse[startIndex].Id;
+     var endId = 99999;
+     if (endIndex <= allidsResponse.length - 1) {
+        endId = allidsResponse[endIndex-1].Id;
+     }
+     allnewsFactory.getNewsOffSet(env, startId, endId)
+          .then(function (response) {
+               $scope.news = response.data.d.results;
+
             }, function (error) {
                 $scope.status = 'Unable to load news content: ' + error.message;
             });
      };
-    //$log.log('Page changed to: ' + $scope.currentPage);
   $scope.init();
 };
 

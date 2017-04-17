@@ -1,5 +1,6 @@
+
 namespace SPDMov.Services {
     public interface INewsletterService{
-        void SubscribeNewsletter(string email);
+        void SubscribeNewsletter(string email, string backofficeUrl);
     }
 }

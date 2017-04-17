@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using SPDMov.Services;
 using SPDMov.ViewModels;
 
@@ -6,10 +7,12 @@ namespace SPDMov.Controllers.Web
 {
     public class AppController : Controller
     {
+        private SPDMovSettings _settings;
         private INewsletterService _newsletterService;
-        public AppController(INewsletterService newsletterService) 
+        public AppController(INewsletterService newsletterService, IOptions<SPDMovSettings> settings) 
         {
             _newsletterService = newsletterService;
+            _settings = settings.Value;
         }
         public IActionResult Index()
         {
@@ -49,8 +52,8 @@ namespace SPDMov.Controllers.Web
                 "{0}#{1}",
                 Url.Action("Index"),
                 "Newsletter");
-            
-            _newsletterService.SubscribeNewsletter(model.Email);
+             
+            _newsletterService.SubscribeNewsletter(model.Email, _settings.BackOfficeUrl);
             TempData["Result"] = "Obrigado por subscrever.";
             return new RedirectResult(redirectUrl);
         }
