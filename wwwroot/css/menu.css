@@ -87,6 +87,7 @@
 
 .spdm_toplevel_listitem a {
     background-color: transparent !important;
+    color: #ffffff;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -102,7 +103,7 @@
 }
 
 div a, a:hover, a:active, a:visited {
-    color: #fff !important;
+    
 }
 
 .spdm_button_redecuidados {

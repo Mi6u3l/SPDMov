@@ -6,33 +6,38 @@
    <script src="~/lib/angular/angular.min.js"></script>
    <script src="~/lib/angular-route/angular-route.min.js"></script>
    <script src="~/js/configSettings.js"></script>
+  <environment names="Development">
     <script src="~/js/article/app-article.js"></script>
-   <script src="~/js/article/articleController.js"></script>
-   <script src="~/js/article/articleFactory.js"></script>
-   <script src="~/js/article/articleDirective.js"></script>
-
+    <script src="~/js/article/articleController.js"></script>
+    <script src="~/js/article/articleFactory.js"></script>
+    <script src="~/js/article/articleDirective.js"></script>    
+  </environment>    
+  <environment names="Production">
+    <script src="~/lib/_app/app-article.js"></script>
+    <script src="~/lib/_app/articleController.js"></script>
+    <script src="~/lib/_app/articleFactory.js"></script>
+    <script src="~/lib/_app/articleDirective.js"></script>
+   </environment>
 }
-
 
 @section AddToHead{
-     <link href="~/css/article.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/article.css" rel="stylesheet" type="text/css" />
 }
-
-<div ng-app="app-article" ng-controller="articleController" >
+<div ng-app="app-article" ng-controller="articleController">
     <div ng-init="articleId = '@ViewBag.ArticleId'">
-     <div class="row">
-        <div class="spdm_article_col col-md-12">
-            <div class="spdm_article_title">
-                {{ title }}
-            </div>
-             <div class="spdm_article_subtitle">
-                {{ subtitle }}
-            </div>
-            <div ng-bind-html="body" class="spdm_article_body">
-                {{ body }}
+        <div class="row">
+            <div class="spdm_article_col col-md-12">
+                <div class="spdm_article_title">
+                    {{ title }}
+                </div>
+                <div class="spdm_article_subtitle">
+                    {{ subtitle }}
+                </div>
+                <div ng-bind-html="body" class="spdm_article_body">
+                    {{ body }}
+                </div>
             </div>
         </div>
-     </div>    
-   </div>
-   <set-article-images></set-article-images>
+    </div>
+    <set-article-images></set-article-images>
 </div>

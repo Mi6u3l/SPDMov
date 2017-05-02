@@ -3,25 +3,47 @@
 }
 
 @section Scripts {
+
     <script src="~/lib/angular/angular.min.js"></script>
-    <script src="~/js/homepage/app-homepage.js"></script>
-    <script src="~/js/configSettings.js"></script>
-    <script src="~/js/homepage/topCarouselController.js"></script>
-    <script src="~/js/homepage/topCarouselFactory.js"></script>
-    <script src="~/js/homepage/topCarouselDirective.js"></script>
-    <script src="~/js/homepage/newsController.js"></script>
-    <script src="~/js/homepage/newsFactory.js"></script>
-    <script src="~/js/homepage/eventsCarouselController.js"></script>
-    <script src="~/js/homepage/eventsCarouselFactory.js"></script>
-    <script src="~/js/homepage/eventsCarouselDirective.js"></script>
+    <environment names="Development">
+        <script src="~/js/homepage/app-homepage.js"></script>
+        <script src="~/js/configSettings.js"></script>
+        <script src="~/js/homepage/topCarouselController.js"></script>
+        <script src="~/js/homepage/topCarouselFactory.js"></script>
+        <script src="~/js/homepage/topCarouselDirective.js"></script>
+        <script src="~/js/homepage/newsController.js"></script>
+        <script src="~/js/homepage/newsFactory.js"></script>
+        <script src="~/js/homepage/eventsCarouselController.js"></script>
+        <script src="~/js/homepage/eventsCarouselFactory.js"></script>
+        <script src="~/js/homepage/eventsCarouselDirective.js"></script>
+    </environment>
+    <environment names="Production">
+        <script src="~/lib/_app/app-homepage.js"></script>
+        <script src="~/lib/_app/configSettings.js"></script>
+        <script src="~/lib/_app/topCarouselController.js"></script>
+        <script src="~/lib/_app/topCarouselFactory.js"></script>
+        <script src="~/lib/_app/topCarouselDirective.js"></script>
+        <script src="~/lib/_app/newsController.js"></script>
+        <script src="~/lib/_app/newsFactory.js"></script>
+        <script src="~/lib/_app/eventsCarouselController.js"></script>
+        <script src="~/lib/_app/eventsCarouselFactory.js"></script>
+        <script src="~/lib/_app/eventsCarouselDirective.js"></script>
+    </environment>
+
+
     <script src="~/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 }
 
 @section AddToHead{
+    <environment names="Development">
     <link href="~/css/topcarousel.css" rel="stylesheet" type="text/css" />
     <link href="~/css/news.css" rel="stylesheet" type="text/css" />
     <link href="~/css/searchimage.css" rel="stylesheet" type="text/css" />
     <link href="~/css/eventscarousel.css" rel="stylesheet" type="text/css" />
+    </environment>
+    <evironment names="Production">
+        <link rel="stylesheet" href="~/lib/_app/bundle.css" />
+    </evironment>
 }
 
 <div ng-app="app-homepage">
@@ -50,15 +72,15 @@
                 <div class="spdm_news_wrapper">
                     <div ng-repeat="newsitem in news" class="spdm_news_itemwrapper">
                         <a href="/App/NewsItem/{{ newsitem.ID }}">
-                          <figure class="spdm_news_item">
-                            <div class="spdm_news_origin">{{ newsitem.Origin }}</div>
-                            <img src="{{ absoulteUrl + newsitem.FileRef}}" />
-                            <figcaption class="spdm_news_caption">
-                                <div class="spdm_news_date">{{ newsitem.Date | date :  "dd/MM/yyyy" }}</div>
-                                <h4>{{ newsitem.Title }}</h4>
-                                <h5>{{ newsitem.Subtitle }}</h5>
-                            </figcaption>
-                         </figure>
+                            <figure class="spdm_news_item">
+                                <div class="spdm_news_origin">{{ newsitem.Origin }}</div>
+                                <img src="{{ absoulteUrl + newsitem.FileRef}}" />
+                                <figcaption class="spdm_news_caption">
+                                    <div class="spdm_news_date">{{ newsitem.Date | date :  "dd/MM/yyyy" }}</div>
+                                    <h4>{{ newsitem.Title }}</h4>
+                                    <h5>{{ newsitem.Subtitle }}</h5>
+                                </figcaption>
+                            </figure>
                         </a>
                     </div>
                 </div>

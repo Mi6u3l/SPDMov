@@ -6,33 +6,38 @@
    <script src="~/lib/angular/angular.min.js"></script>
    <script src="~/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
    <script src="~/js/configSettings.js"></script>
-   <script src="~/js/newsitem/app-allnews.js"></script>
-   <script src="~/js/newsitem/allnewsController.js"></script>
-   <script src="~/js/newsitem/allnewsFactory.js"></script>
+   <environment names="Development">
+    <script src="~/js/newsitem/app-allnews.js"></script>
+    <script src="~/js/newsitem/allnewsController.js"></script>
+    <script src="~/js/newsitem/allnewsFactory.js"></script>
+   </environment>
+   <environment names="Production">
+    <script src="~/lib/_app/app-allnews.js"></script>
+    <script src="~/lib/_app/allnewsController.js"></script>
+    <script src="~/lib/_app/allnewsFactory.js"></script>
+   </environment>
 }
-
 
 @section AddToHead{
     <link href="~/css/news.css" rel="stylesheet" type="text/css" />
 }
-
 <div ng-app="app-allnews" ng-controller="allnewsController">
     <div class="spdm_allnews_row row">
         <div class="col-md-12">
-        <div class="spdm_allnews_title">
-            Todas as notícias
-         </div>
-          <div ng-repeat="newsitem in news" class="spdm_news_itemwrapper">
+            <div class="spdm_allnews_title">
+                Todas as notícias
+            </div>
+            <div ng-repeat="newsitem in news" class="spdm_news_itemwrapper">
                 <a href="/App/NewsItem/{{ newsitem.ID }}">
-                <figure class="spdm_news_item">
-                    <div class="spdm_news_origin">{{ newsitem.Origin }}</div>
-                    <img src="{{ absoulteUrl + newsitem.FileRef}}" />
-                    <figcaption class="spdm_allnews_caption">
-                        <div class="spdm_news_date">{{ newsitem.Date | date :  "dd/MM/yyyy" }}</div>
-                        <h4>{{ newsitem.Title }}</h4>
-                        <h5>{{ newsitem.Subtitle }}</h5>
-                    </figcaption>
-                </figure>
+                    <figure class="spdm_news_item">
+                        <div class="spdm_news_origin">{{ newsitem.Origin }}</div>
+                        <img src="{{ absoulteUrl + newsitem.FileRef}}" />
+                        <figcaption class="spdm_allnews_caption">
+                            <div class="spdm_news_date">{{ newsitem.Date | date :  "dd/MM/yyyy" }}</div>
+                            <h4>{{ newsitem.Title }}</h4>
+                            <h5>{{ newsitem.Subtitle }}</h5>
+                        </figcaption>
+                    </figure>
                 </a>
             </div>
             <div>

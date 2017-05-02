@@ -7,9 +7,10 @@
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    
     <link rel="stylesheet" href="~/css/menu.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+
+
     @if (IsSectionDefined("AddToHead"))
     {
         @RenderSection("AddToHead", required: false)
@@ -40,20 +41,20 @@
                     <li class="dropdown spdm_toplevel_listitem spdm_oneline_listitem active">
                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">A SPDMov<i class="fa fa-chevron-down fa-1" aria-hidden="true"></i></a>
                        <ul class="dropdown-menu">
-                            <li><a href="/App/Article/Texto Word">Texto word</a></li>
+                            <li><a href="/App/Article/ASPDMov">A SPDMov</a></li>
                             <li><a href="/App/Article/Historia">História</a></li>
-                            <li><a href="#">Reuniões</a></li>
-                            <li><a href="#">Órgãos Sociais</a></li>
-                            <li><a href="#">Working Groups</a></li>
-                            <li><a href="#">Contactos</a></li>
+                            <li><a href="/App/Article/Reunioes">Reuniões</a></li>
+                            <li><a href="/App/Article/OrgaosSociais">Órgãos Sociais</a></li>
+                            <li><a href="/App/Article/WorkingGroups">Working Groups</a></li>
+                            <li><a href="/App/Article/Contactos">Contactos</a></li>
                         </ul>
                     </li>
                     <li class="dropdown spdm_toplevel_listitem">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Doenças do Movimento <i class="fa fa-chevron-down fa-1" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">O que são</a></li>
-                            <li><a href="#">Principais doenças</a></li>
-                            <li><a href="#">Doenças raras</a></li>
+                            <li><a href="/App/Article/oquesao">O que são</a></li>
+                            <li><a href="/App/Article/principaisdoencas">Principais doenças</a></li>
+                            <li><a href="/App/Article/doencasraras">Doenças raras</a></li>
                         </ul>
                     </li>
                     <li class="spdm_toplevel_listitem">
@@ -63,20 +64,20 @@
                     </li>
                     <li class="spdm_toplevel_listitem">
                         <div class="spdm_toplevel_wrapper">
-                            <a href="#contact">Notícias</a>
+                            <a href="/App/AllNews">Notícias</a>
                         </div>
                     </li>
                     <li class="spdm_toplevel_listitem spdm_oneline_listitem ">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Educação <i class="fa fa-chevron-down fa-1" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Moving Buzz</a></li>
-                            <li><a href="#">Actualizações</a></li>
-                            <li><a href="#">Cursos da SPDMov</a></li>
+                            <li><a href="/App/Article/movingbuzz">Moving Buzz</a></li>
+                            <li><a href="/App/Article/actualizacoes">Actualizações</a></li>
+                            <li><a href="/App/Article/cursos">Cursos da SPDMov</a></li>
                         </ul>
                     </li>
                      <li class="spdm_toplevel_listitem spdm_toplevel_listitem_last">
                         <div class="spdm_toplevel_last">
-                            <a href="#contact">Links de interesse</a>
+                            <a href="/App/Article/linksdeinteresse">Links de interesse</a>
                         </div>
                     </li>
                     <li class="spdm_listitem_mobile">
@@ -103,14 +104,14 @@
                     <div><img src="~/img/allergan.png" /></div>
                 </div>
                 <div class="spdm_footer_links1">
-                    <div><a href="/Article/">A SPDMov</a></div>
-                    <div><a href="#">Doenças do Movimento</a></div>
-                    <div><a href="#">Links de Interesse</a></div>
+                    <div><a href="/App/Article/ASPDMov">A SPDMov</a></div>
+                    <div><a href="/App/Article/principaisdoencas">Doenças do Movimento</a></div>
+                    <div><a href=""/App/Article/linksdeinteresse">Links de Interesse</a></div>
                 </div>
                 <div class="spdm_footer_links2">
-                    <div><a href="#">Notícias e Eventos</a></div>
-                    <div><a href="#">Educação</a></div>
-                    <div><a href="#">Rede de Cuidados</a></div>
+                    <div><a href="/App/AllNews">Notícias e Eventos</a></div>
+                    <div><a href="/App/Article/movingbuzz">Educação</a></div>
+                    <div><a href="/App/Network">Rede de Cuidados</a></div>
                 </div>
                 <div class="spdm_footer_newsletter">
                     <div class="spdm_footer_newsletter_title">Subscreva a nossa Newsletter</div>
@@ -127,10 +128,14 @@
     <script type="text/javascript" src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script type="text/javascript" src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
     <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="~/js/site.js"></script>
-    @RenderSection("scripts", false)
+    <environment names="Development">
+        <script type="text/javascript" src="~/js/site.js"></script>
+    </environment>
+    <environment names="Production">
+        <script type="text/javascript" src="~/lib/_app/site.js"></script>
+    </environment>
+        @RenderSection("scripts", false)
 
-   
 </body>
 
 </html>
