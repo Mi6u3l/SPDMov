@@ -1,2 +1,2 @@
 ﻿'use strict';
-var app = angular.module('app-network', []);
+var app = angular.module('app-network', ['configSettings']);

@@ -4,13 +4,16 @@
 
 @section Scripts {
    <script src="~/lib/angular/angular.min.js"></script>
+   <script src="~/js/configSettings.js"></script>
     <environment names="Development">
         <script src="~/js/network/app-network.js"></script>
         <script src="~/js/network/networkController.js"></script>
+        <script src="~/js/network/networkFactory.js"></script>
     </environment>
     <environment names="Production">
         <script src="~/lib/_app/app-network.js"></script>
         <script src="~/lib/_app/networkController.js"></script>
+        <script src="~/lib/_app/networkFactory.js"></script>
     </environment>
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM1NEcsr1ZwsFtiv62qH92-Z_F32z6gz4&sensor=false"></script>
    <script src="~/lib/lodash/dist/lodash.min.js"></script>
@@ -31,15 +34,6 @@
      </div>
     <div class="row">
         <div class="spdm_network_search col-md-12">
-           <div class="spdm_network_dropdown_treatment">
-               <button class="dropdown-toggle" type="button" data-toggle="dropdown">
-                   TRATAMENTO
-                   <span class="spdm_network_dropdownchevron fa fa-chevron-down fa-1"></span>
-               </button>
-               <ul class="dropdown-menu">
-                   <li ng-repeat="treatment in treatments"><a href="">{{ treatment.name }}</a></li>
-               </ul>
-           </div>
            <div class="spdm_network_dropdown_location">
                <button class="dropdown-toggle" type="button" data-toggle="dropdown">
                    LOCALIDADE
@@ -57,8 +51,7 @@
                 <div class="spdm_network_closedetails" ng-click="showDetails = false"><i class="fa fa-times" aria-hidden="true"></i></div>
                 <div class="spdm_network_detail_image"><img class="img-responsive" ng-src="{{ detail.image }}"></div>
                 <div class="spdm_network_detail_title">{{ detail.title }}</div>
-                <div class="spdm_network_detail_subtitle">{{ detail.subtitle }}</div>
-                <div class="spdm_network_detail_description">{{ detail.description }}</div>
+                <div ng-bind-html="detail.description" class="spdm_network_detail_description">{{ detail.description }}</div>
             </div>
             <div class="spdm_network_map" id="map" ></div>
         </div>

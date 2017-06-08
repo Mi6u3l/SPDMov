@@ -70,6 +70,8 @@
 
 .spdm_network_dropdown_location ul {
     margin-top: 37px;
+    left:27%;
+    width:185px;
 }
 
 .spdm_network_dropdown_location button {
@@ -94,7 +96,7 @@
 
 .spdm_network_details {
     background-color: #3d81c0;
-    height: 429px;
+    height: 516px;
     width: 100%;
     position: absolute;
     z-index: 1;
@@ -150,18 +152,25 @@
         font-size: 18px;
         padding-top: 25px;
 }
+     .spdm_network_dropdown_location ul {
+        left:33%;
+    }
 }
 /*end-horizontal mobile view port */
 
 /*start-tablet view port*/
 @media (min-width: 768px) {
+
+    .spdm_network_dropdown_location ul {
+        left:38%;
+    }
+
     .spdm_network_map {
         height: 515px;
     }
 
     .spdm_network_details {
         width: 50%;
-        height: 331px;
     }
 
     .spdm_network_image span {
@@ -181,11 +190,19 @@
         font-size: 30px;
         padding-top: 64px;
     }
+
+     .spdm_network_dropdown_location ul {
+        left:41%;
+    }
 }
 /*end-horizontal tablet view port/*
 
 /*start-desktop view */
 @media (min-width: 1200px) {
+    .spdm_network_dropdown_location ul {
+        left:43%;
+    }
+
     .spdm_network_image {
         padding-top: 0px;
     }

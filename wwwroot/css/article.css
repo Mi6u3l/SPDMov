@@ -3,6 +3,10 @@
     display: inline-block;
 }
 
+.spdm_article_loader {
+    text-align:center;
+}
+
 .spdm_article_col {
     padding-bottom: 210px;
     padding-left: 0px;
@@ -35,7 +39,7 @@
 .spdm_article_body {
     padding-left: 15px;
     padding-right: 15px;
-    word-break: break-all;
+    word-break: normal;
 }
 /*end-minimum view port*/
 

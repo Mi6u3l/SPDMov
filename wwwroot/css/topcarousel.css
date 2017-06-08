@@ -96,6 +96,12 @@
     background-position-y: 18px;
 }
 
+.spdm_topcarousel_loader {
+    padding-top:120px;
+    height:320px;
+    text-align:center;
+}
+
 .spdm_topcarousel_subheading {
     padding-bottom: 50px;
     color: #fff;
@@ -193,6 +199,12 @@
     .carousel-caption {
         padding-bottom: 110px;
     }
+
+    .spdm_topcarousel_loader {
+        height:545px;
+        text-align:center;
+    }
+
     .spdm_topcarousel_col {
         width: 100%;
         padding-left: 0px;

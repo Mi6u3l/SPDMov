@@ -5,5 +5,7 @@ angular.module('configSettings', [])
   'menuArticleList': 'Article Menu',
   'topCarouselList': 'TopCarousel',
   'newsList': 'News',
-  'eventsCarouselList' : 'Events'
+  'eventsCarouselList': 'Events',
+  'networkList': 'Network',
+  'partnersList' : 'Partners'
 });

@@ -2,6 +2,7 @@
 app.controller("allnewsController", allnewsController);
 function allnewsController($scope, env, allnewsFactory, $sce) {
   $scope.absoulteUrl = env.backofficeURL;
+  $scope.newsLoading = true;
   $scope.itemsPerPage = 5;
   $scope.currentPage = 1;
   $scope.allNewsIds;
@@ -48,7 +49,9 @@ function allnewsController($scope, env, allnewsFactory, $sce) {
      }
      allnewsFactory.getNewsOffSet(env, startId, endId)
           .then(function (response) {
-               $scope.news = response.data.d.results;
+              $scope.news = response.data.d.results;
+              $scope.newsLoading = false;
+            
 
             }, function (error) {
                 $scope.status = 'Unable to load news content: ' + error.message;

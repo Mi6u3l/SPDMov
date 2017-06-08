@@ -14,7 +14,7 @@ app.directive('setCarouselPaging', ['$timeout', function ($timeout) {
                             }
                          });
                     }());
-                }, 500, false);
+                }, 700, false);
         }
     };
 }]);

@@ -18,6 +18,16 @@
     <script src="~/lib/_app/articleFactory.js"></script>
     <script src="~/lib/_app/articleDirective.js"></script>
    </environment>
+    <script type="text/javascript">
+        if (window.location.href.indexOf('linksdeinteresse') > -1) {
+            var menuLinksInteresse = $('a[href*="/App/Article/linksdeinteresse"]');
+            menuLinksInteresse.closest('.spdm_toplevel_last').addClass('spdm_toplevel_active');
+        }
+        if (window.location.href.indexOf('documentos') > -1) {
+            var menuDocumentos = $('a[href*="/App/Article/documentos"]');
+            menuDocumentos.closest('.spdm_toplevel_wrapper').addClass('spdm_toplevel_active');
+        }
+    </script>
 }
 
 @section AddToHead{
@@ -36,8 +46,12 @@
                 <div ng-bind-html="body" class="spdm_article_body">
                     {{ body }}
                 </div>
+                <div class="spdm_article_loader" ng-show="articleLoading">
+                    <img src="~/img/gears.gif" />
+                </div>
             </div>
         </div>
     </div>
     <set-article-images></set-article-images>
+    
 </div>

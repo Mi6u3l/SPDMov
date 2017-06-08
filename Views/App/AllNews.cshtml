@@ -16,6 +16,10 @@
     <script src="~/lib/_app/allnewsController.js"></script>
     <script src="~/lib/_app/allnewsFactory.js"></script>
    </environment>
+    <script type="text/javascript">
+        var menuNews = $('a[href*="/App/AllNews"]');
+        menuNews.closest('.spdm_toplevel_wrapper').addClass('spdm_toplevel_active');
+    </script>
 }
 
 @section AddToHead{
@@ -23,9 +27,12 @@
 }
 <div ng-app="app-allnews" ng-controller="allnewsController">
     <div class="spdm_allnews_row row">
-        <div class="col-md-12">
+        <div class="spdm_allnews_col col-md-12">
             <div class="spdm_allnews_title">
-                Todas as notícias
+                Notícias
+            </div>
+            <div class="spdm_allnews_loader" ng-show="newsLoading">
+                <img src="~/img/gears.gif" />
             </div>
             <div ng-repeat="newsitem in news" class="spdm_news_itemwrapper">
                 <a href="/App/NewsItem/{{ newsitem.ID }}">
@@ -40,8 +47,8 @@
                     </figure>
                 </a>
             </div>
-            <div>
-                <ul uib-pagination total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged()"></ul>
+           <div>
+                <ul uib-pagination previous-text="Anterior" next-text="Seguinte"  total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged()"></ul>
             </div>
         </div>
     </div>

@@ -6,7 +6,7 @@ app.directive('initEventsCarousel', ['$timeout', function ($timeout) {
                     (function () {
                         $('#eventsCarousel').find('.item').first().addClass('active');
                         $('#eventsCarousel').find('.carousel-inner').css('width', '100%');
-                        $('#eventsCarousel').carousel({ interval: 2500 });
+                        $('#eventsCarousel').carousel({ interval: 5000 });
                     }());
 
                     (function () {
@@ -25,7 +25,7 @@ app.directive('initEventsCarousel', ['$timeout', function ($timeout) {
                             }
                         });
                     }());
-                }, 500, false);
+                }, 1000, false);
         }
     };
 }]);

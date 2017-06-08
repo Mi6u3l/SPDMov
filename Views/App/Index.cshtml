@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "SPDMov";
 }
 
 @section Scripts {
@@ -13,6 +13,8 @@
         <script src="~/js/homepage/topCarouselDirective.js"></script>
         <script src="~/js/homepage/newsController.js"></script>
         <script src="~/js/homepage/newsFactory.js"></script>
+        <script src="~/js/homepage/partnersController.js"></script>
+        <script src="~/js/homepage/partnersFactory.js"></script>
         <script src="~/js/homepage/eventsCarouselController.js"></script>
         <script src="~/js/homepage/eventsCarouselFactory.js"></script>
         <script src="~/js/homepage/eventsCarouselDirective.js"></script>
@@ -25,6 +27,8 @@
         <script src="~/lib/_app/topCarouselDirective.js"></script>
         <script src="~/lib/_app/newsController.js"></script>
         <script src="~/lib/_app/newsFactory.js"></script>
+        <script src="~/lib/_app/partnersController.js"></script>
+        <script src="~/lib/_app/partnersFactory.js"></script>
         <script src="~/lib/_app/eventsCarouselController.js"></script>
         <script src="~/lib/_app/eventsCarouselFactory.js"></script>
         <script src="~/lib/_app/eventsCarouselDirective.js"></script>
@@ -40,6 +44,7 @@
     <link href="~/css/news.css" rel="stylesheet" type="text/css" />
     <link href="~/css/searchimage.css" rel="stylesheet" type="text/css" />
     <link href="~/css/eventscarousel.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/partner.css" rel="stylesheet" type="text/css" />
     </environment>
     <evironment names="Production">
         <link rel="stylesheet" href="~/lib/_app/bundle.css" />
@@ -60,9 +65,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="spdm_topcarousel_loader" ng-show="topCarouselLoading">
+                    <img src="~/img/gears.gif" />
+                </div>
             </div>
+            <set-carousel-paging></set-carousel-paging>
         </div>
-        <set-carousel-paging></set-carousel-paging>
     </div>
     <!-- news -->
     <div class="spdm_news_row row">
@@ -85,6 +93,15 @@
                     </div>
                 </div>
                 <a href="/App/AllNews"><span class="spdm_news_morenews">Ler mais Notícias</span></a>
+            </div>
+        </div>
+    </div>
+    <!-- Partners -->
+    <div class="spdm_partners_row row">
+        <div class="spdm_partners_col col-md-12" ng-controller="partnersController">
+            <span class="spdm_partners_title">Parceiros</span>
+            <div class="spdm_partner" ng-repeat="partneritem in partners">
+                <img src="{{ absoulteUrl + partneritem.FileRef}}" class="img-responsive" />
             </div>
         </div>
     </div>
