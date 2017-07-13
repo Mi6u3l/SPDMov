@@ -58,11 +58,13 @@
             <div ng-controller="topCarouselController" id="slides_control">
                 <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
                     <div uib-slide ng-repeat="slide in slides track by $index" index="$index">
-                        <img class="spdm_topcarousel_image" ng-src="{{ absoulteUrl + slide.FileRef}}" style="margin:auto;">
-                        <div class="carousel-caption">
-                            <h1 class="spdm_topcarousel_heading">{{slide.Heading}}</h1>
-                            <h4 class="spdm_topcarousel_subheading">{{slide.Subheading}}</h4>
-                        </div>
+                        <a href="{{ slide.Link }}">
+                            <img class="spdm_topcarousel_image img-responsive" ng-src="{{ absoulteUrl + slide.FileRef}}" style="margin:auto;">
+                            <div class="carousel-caption">
+                                <h1 class="spdm_topcarousel_heading">{{slide.Heading}}</h1>
+                                <h4 class="spdm_topcarousel_subheading">{{slide.Subheading}}</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="spdm_topcarousel_loader" ng-show="topCarouselLoading">
@@ -82,7 +84,7 @@
                         <a href="/App/NewsItem/{{ newsitem.ID }}">
                             <figure class="spdm_news_item">
                                 <div class="spdm_news_origin">{{ newsitem.Origin }}</div>
-                                <img src="{{ absoulteUrl + newsitem.FileRef}}" />
+                                <img ng-src="{{ absoulteUrl + newsitem.FileRef}}" />
                                 <figcaption class="spdm_news_caption">
                                     <div class="spdm_news_date">{{ newsitem.Date | date :  "dd/MM/yyyy" }}</div>
                                     <h4>{{ newsitem.Title }}</h4>
@@ -97,11 +99,11 @@
         </div>
     </div>
     <!-- Partners -->
-    <div class="spdm_partners_row row">
+    <div class="spdm_partners_row row"> 
         <div class="spdm_partners_col col-md-12" ng-controller="partnersController">
             <span class="spdm_partners_title">Parceiros</span>
             <div class="spdm_partner" ng-repeat="partneritem in partners">
-                <img src="{{ absoulteUrl + partneritem.FileRef}}" class="img-responsive" />
+                <img ng-src="{{ absoulteUrl + partneritem.FileRef}}" class="img-responsive" />
             </div>
         </div>
     </div>

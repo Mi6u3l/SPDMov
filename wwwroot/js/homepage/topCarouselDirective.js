@@ -2,19 +2,25 @@
 app.directive('setCarouselPaging', ['$timeout', function ($timeout) {
     return {
         link: function ($scope, element, attrs) {
+            function addPaging() {
                 $timeout(function () {
-                    //top carousel paging
-                    (function () {
-                        var controllerScope = $scope.$$childHead;
-                        var slides = controllerScope.slides;
+                    var controllerScope = $scope.$$childHead;
+                    var slides = controllerScope.slides;
+                    if (slides) {
                         $("span.ng-binding").each(function (index) {
                             if (slides[index] != undefined) {
                                 $(this).text(slides[index].Paging);
                                 $(this).removeClass('sr-only');
                             }
-                         });
-                    }());
-                }, 700, false);
+                        });
+                    } else {
+                        addPaging();
+                    }
+                }, 100);
+            }
+
+            addPaging();
+
         }
     };
 }]);

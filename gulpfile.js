@@ -19,11 +19,12 @@ gulp.task('minifyJs', function (done) {
     .pipe(gulp.dest('./wwwroot/lib/_app'))
 
 
-});
+});http://localhost:59234/
 
 gulp.task('copyImg', function (done) {
     gulp.src([
-        'wwwroot/img/*.png'
+        'wwwroot/img/*.png',
+        'wwwroot/img/*.jpg',
     ])
     .pipe(gulp.dest('./wwwroot/lib/img/'))
 });

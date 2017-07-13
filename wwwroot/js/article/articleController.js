@@ -2,6 +2,7 @@
 app.controller("articleController", articleController);
 function articleController($scope, articleFactory, $sce, env) {
     $scope.articleLoading = true;
+    $scope.absoulteUrl = env.backofficeURL;
     $scope.body;
     $scope.env = env;
     $scope.$watch('articleId', function () {
